@@ -21,7 +21,7 @@
 </div>
 <section class="home">
     <div id="content" class='container' role="main" tabindex="-1">
-      <div class="row">
+      <div class="row">        
         <div class="co col-md-6 col-lg-4">
           <h2>Alma D</h2>
           <div class="col-content">

@@ -41,6 +41,8 @@ header {
     border-bottom: none;
     padding:1rem 0 1.5rem 0;
 
+    border-top:3px solid white;
+
     .navbar-brand {
         line-height: 1;
         padding-top:0.5rem;
@@ -148,6 +150,22 @@ header {
         vertical-align: middle;
         font-size: 1.5rem;
     }
+}
+
+.oranje{
+  border-top:3px solid #FD701A;
+}
+
+.groen{
+  border-top:3px solid #B6DD00;
+}
+
+.paars{
+  border-top:3px solid #C63584;
+}
+
+.blauw{
+  border-top:3px solid #0095D5;
 }
 
 #search {
@@ -312,115 +330,121 @@ header {
       width: 100%;
     }
 
-    .co{
-      margin-bottom:3rem;
 
-      @include media-breakpoint-down(sm) {
-          margin-bottom:0rem;
-      }
+}
 
-      h2{
-          font-family: $font-family-sans-serif;
-          text-transform: uppercase;
-          font-weight:bold;
-          font-size: 1.3rem;
-          margin-bottom:0.8rem;
-          color:rgba($gray-dark,0.9);
-      }
+.co{
+  margin-bottom:3rem;
 
-      h3{
-        font-family: $font-family-sans-serif;
-        font-weight:400;
-        font-size: 1.1rem;
+  img {
+    width: 100%;
+  }
 
-        a{
-          color:$gray;
+  @include media-breakpoint-down(sm) {
+      margin-bottom:0rem;
+  }
+
+  h2{
+      font-family: $font-family-sans-serif;
+      text-transform: uppercase;
+      font-weight:bold;
+      font-size: 1.3rem;
+      margin-bottom:0.8rem;
+      color:rgba($gray-dark,0.9);
+  }
+
+  h3{
+    font-family: $font-family-sans-serif;
+    font-weight:400;
+    font-size: 1.1rem;
+
+    a{
+      color:$gray;
+    }
+  }
+
+  ul{
+      margin:0;padding:0;
+      list-style: none;
+
+      li{
+        border-top:1px solid rgba($gray-libis,0.2);
+        margin-left:0;
+        padding:1rem 0;
+
+        img{
+          max-height:45px;
+          width:auto;
+          margin:0 auto;
         }
       }
+  }
 
-      ul{
-          margin:0;padding:0;
-          list-style: none;
+  .block-link{
+    color:$gray-dark;
+  }
 
-          li{
-            border-top:1px solid rgba($gray-libis,0.2);
-            margin-left:0;
-            padding:1rem 0;
+  .col-content{
+    padding-bottom:1rem;
+  }
 
-            img{
-              max-height:45px;
-              width:auto;
-              margin:0 auto;
-            }
-          }
-      }
+  .col-overlay{
+    position:absolute;
+    bottom:0;
+    left:0.9rem;
+    max-width:88%;
+    padding:1rem;
+    background:white;
+    border-bottom:2px solid rgba($gray-libis,0.2);
+    border-right:1px solid rgba($gray-libis,0.2);
 
-      .block-link{
-        color:$gray-dark;
-      }
+    @include media-breakpoint-down(sm) {
+        margin-bottom:1rem;
+    }
 
-      .col-content{
-        padding-bottom:1rem;
-      }
+    p{
+      height:auto;
+      overflow:auto;
+    }
+  }
 
-      .col-overlay{
-        position:absolute;
-        bottom:0;
-        left:0.9rem;
-        max-width:88%;
-        padding:1rem;
-        background:white;
-        border-bottom:2px solid rgba($gray-libis,0.2);
-        border-right:1px solid rgba($gray-libis,0.2);
+  .col-overlay::before {
+    content: "\203A";
+    float: left;
+    width: 17px;
+    font-size: 20px;
+    color:$gray-libis;
+    line-height: 1.1;
+  }
 
-        @include media-breakpoint-down(sm) {
-            margin-bottom:1rem;
-        }
+  @include media-breakpoint-down(sm) {
+      padding:2rem 1rem 2rem 1rem;
+      height:auto;
 
-        p{
-          height:auto;
-          overflow:auto;
-        }
-      }
-
-      .col-overlay::before {
-        content: "\203A";
-        float: left;
-        width: 17px;
-        font-size: 20px;
-        color:$gray-libis;
-        line-height: 1.1;
-      }
-
-      @include media-breakpoint-down(sm) {
-          padding:2rem 1rem 2rem 1rem;
-          height:auto;
-
-          p{
-            font-size: 1rem;
-            text-shadow: none;
-          }
-
-          .more{
-            font-size: 1rem;
-          }
+      p{
+        font-size: 1rem;
+        text-shadow: none;
       }
 
       .more{
         font-size: 1rem;
-        margin-bottom:0;
-
-        a{
-          color: rgba($dark,0.6);
-          font-weight:300;
-        }
       }
+  }
 
-      .date{
-        font-size: 0.9rem;
-        color: $gray-libis;
-      }
+  .more{
+    font-size: 1rem;
+    margin-bottom:0;
+
+    a{
+      color: rgba($dark,0.6);
+      font-weight:300;
     }
+  }
+
+  .date{
+    font-size: 0.9rem;
+    color: $gray-libis;
+  }
 }
 
 .diensten-section{
@@ -720,7 +744,7 @@ section.news{
     h3 {
         font-weight: 700;
         font-size: 1.1rem;
-        margin-bottom:0.6rem;
+        margin-bottom:1rem;
         font-family: $font-family-sans-serif;
     }
 
@@ -779,7 +803,6 @@ section.news{
         .top {
             height: auto;
             overflow: hidden;
-            margin-bottom:1rem;
 
             h1 {
                 font-weight: 300;
@@ -815,12 +838,52 @@ section.news{
         }
     }
 
+    .intro{
+      font-size:1.4rem;
+      margin-bottom:1rem;
+      font-weight:100;
+      color: rgba($gray-dark,0.8);
+      font-family: $font-family-sans-serif;
+    }
+
+    img{
+      max-width:100%;
+    }
+
     .content {
         min-height:300px;
+        padding: 0 2rem;
+
+        .item-file{
+          margin-bottom:2rem;
+        }
+
+        ul li{
+          margin-bottom:0.5rem;
+        }
+
+        p{
+          margin-bottom:2rem;
+        }
+    }
+
+    .co{
+      margin-bottom:2rem;
+
+      ul li{
+        border-top:none;
+      }
+    }
+
+    .side{
+      margin-top: 0rem;
+      h2{
+        font-weight:bold;
+      }
     }
 
     .side-nav {
-        margin-top: 2rem;
+
         font-family: $font-family-sans-serif;
 
         ul {

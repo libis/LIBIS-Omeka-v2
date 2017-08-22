@@ -7700,6 +7700,7 @@ header {
   background: white;
   border-bottom: none;
   padding: 1rem 0 1.5rem 0;
+  border-top: 3px solid white;
 }
 
 .navbar .navbar-brand {
@@ -7812,6 +7813,22 @@ header {
 .navbar i {
   vertical-align: middle;
   font-size: 1.5rem;
+}
+
+.oranje {
+  border-top: 3px solid #FD701A;
+}
+
+.groen {
+  border-top: 3px solid #B6DD00;
+}
+
+.paars {
+  border-top: 3px solid #C63584;
+}
+
+.blauw {
+  border-top: 3px solid #0095D5;
 }
 
 #search {
@@ -7977,17 +7994,21 @@ header {
   width: 100%;
 }
 
-.home .co {
+.co {
   margin-bottom: 3rem;
 }
 
+.co img {
+  width: 100%;
+}
+
 @media (max-width: 767px) {
-  .home .co {
+  .co {
     margin-bottom: 0rem;
   }
 }
 
-.home .co h2 {
+.co h2 {
   font-family: "Open Sans", sans-serif;
   text-transform: uppercase;
   font-weight: bold;
@@ -7996,43 +8017,43 @@ header {
   color: rgba(51, 51, 51, 0.9);
 }
 
-.home .co h3 {
+.co h3 {
   font-family: "Open Sans", sans-serif;
   font-weight: 400;
   font-size: 1.1rem;
 }
 
-.home .co h3 a {
+.co h3 a {
   color: #666;
 }
 
-.home .co ul {
+.co ul {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-.home .co ul li {
+.co ul li {
   border-top: 1px solid rgba(179, 182, 187, 0.2);
   margin-left: 0;
   padding: 1rem 0;
 }
 
-.home .co ul li img {
+.co ul li img {
   max-height: 45px;
   width: auto;
   margin: 0 auto;
 }
 
-.home .co .block-link {
+.co .block-link {
   color: #333;
 }
 
-.home .co .col-content {
+.co .col-content {
   padding-bottom: 1rem;
 }
 
-.home .co .col-overlay {
+.co .col-overlay {
   position: absolute;
   bottom: 0;
   left: 0.9rem;
@@ -8044,17 +8065,17 @@ header {
 }
 
 @media (max-width: 767px) {
-  .home .co .col-overlay {
+  .co .col-overlay {
     margin-bottom: 1rem;
   }
 }
 
-.home .co .col-overlay p {
+.co .col-overlay p {
   height: auto;
   overflow: auto;
 }
 
-.home .co .col-overlay::before {
+.co .col-overlay::before {
   content: "\203A";
   float: left;
   width: 17px;
@@ -8064,30 +8085,30 @@ header {
 }
 
 @media (max-width: 767px) {
-  .home .co {
+  .co {
     padding: 2rem 1rem 2rem 1rem;
     height: auto;
   }
-  .home .co p {
+  .co p {
     font-size: 1rem;
     text-shadow: none;
   }
-  .home .co .more {
+  .co .more {
     font-size: 1rem;
   }
 }
 
-.home .co .more {
+.co .more {
   font-size: 1rem;
   margin-bottom: 0;
 }
 
-.home .co .more a {
+.co .more a {
   color: rgba(36, 36, 36, 0.6);
   font-weight: 300;
 }
 
-.home .co .date {
+.co .date {
   font-size: 0.9rem;
   color: #B3B6BB;
 }
@@ -8389,7 +8410,7 @@ section.news .news-container .news-item .datum {
 .simple-page-section h3 {
   font-weight: 700;
   font-size: 1.1rem;
-  margin-bottom: 0.6rem;
+  margin-bottom: 1rem;
   font-family: "Open Sans", sans-serif;
 }
 
@@ -8461,7 +8482,6 @@ section.news .news-container .news-item .datum {
 .simple-page-section .page .top {
   height: auto;
   overflow: hidden;
-  margin-bottom: 1rem;
 }
 
 .exhibit-show-section .page .top h1,
@@ -8501,14 +8521,63 @@ section.news .news-container .news-item .datum {
   padding-right: 1rem;
 }
 
+.exhibit-show-section .intro,
+.simple-page-section .intro {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  font-weight: 100;
+  color: rgba(51, 51, 51, 0.8);
+  font-family: "Open Sans", sans-serif;
+}
+
+.exhibit-show-section img,
+.simple-page-section img {
+  max-width: 100%;
+}
+
 .exhibit-show-section .content,
 .simple-page-section .content {
   min-height: 300px;
+  padding: 0 2rem;
+}
+
+.exhibit-show-section .content .item-file,
+.simple-page-section .content .item-file {
+  margin-bottom: 2rem;
+}
+
+.exhibit-show-section .content ul li,
+.simple-page-section .content ul li {
+  margin-bottom: 0.5rem;
+}
+
+.exhibit-show-section .content p,
+.simple-page-section .content p {
+  margin-bottom: 2rem;
+}
+
+.exhibit-show-section .co,
+.simple-page-section .co {
+  margin-bottom: 2rem;
+}
+
+.exhibit-show-section .co ul li,
+.simple-page-section .co ul li {
+  border-top: none;
+}
+
+.exhibit-show-section .side,
+.simple-page-section .side {
+  margin-top: 0rem;
+}
+
+.exhibit-show-section .side h2,
+.simple-page-section .side h2 {
+  font-weight: bold;
 }
 
 .exhibit-show-section .side-nav,
 .simple-page-section .side-nav {
-  margin-top: 2rem;
   font-family: "Open Sans", sans-serif;
 }
 

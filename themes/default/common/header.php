@@ -16,6 +16,9 @@
 
     <?php echo auto_discovery_link_tags(); ?>
 
+    <!-- Determine color and logo -->
+    <?php $style = get_color();?>
+
     <!-- Plugin Stuff -->
     <?php fire_plugin_hook('public_head', array('view' => $this)); ?>
 
@@ -35,11 +38,11 @@
 <?php echo body_tag(array('id' => @$bodyid, 'class' => @$bodyclass)); ?>
     <header role="banner">
       <div class="container">
-        <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+        <nav class="navbar navbar-toggleable-md navbar-light bg-faded <?php echo $style['kleur'];?>">
           <button class="navbar-toggler navbar-toggler-right justify-content-end" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <i class='material-icons'>&#xE5D2;</i>
           </button>
-          <a class="navbar-brand" href="<?php echo WEB_ROOT;?>"><img src="<?php echo img("libis_gray.png");?>"></a>
+          <a class="navbar-brand" href="<?php echo WEB_ROOT;?>"><img src="<?php echo img($style['logo']);?>"></a>
 
           <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
             <?php echo public_nav_main_bootstrap();?>
