@@ -69,7 +69,7 @@ echo head(array(
                   <div class="co col-md-12">
                     <h2><?php echo metadata($usecase, array("Dublin Core", "Title"));?></h2>
                     <div class="col-content">
-                      <img src="<?php echo img("ph/Round.jpg");?>">
+                      <?php echo item_image('square_thumbnail', array(), 0, $usecase);?>
                     </div>
                     <a class="block-link" href="<?php echo metadata($usecase, array("Item Type Metadata", "simple-page"));?>">
                     <div class="col-overlay">
