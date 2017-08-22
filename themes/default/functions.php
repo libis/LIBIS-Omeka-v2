@@ -48,6 +48,16 @@ function get_dienst_metadata($tag,$metadata){
     endif;
 }
 
+function get_usecases(){
+  $usecases = get_records("Item",array("recent" => true,"type" => "use case"),3);
+
+  if(!$usecases):
+    return false;
+  endif;
+
+  return $usecases;
+}
+
 function get_dienst_usecases($tag){
   $usecases = get_records("Item",array("tags" => $tag,"type" => "use case"),2);
 
@@ -71,18 +81,19 @@ function get_color()
 
     //get current page
     $current_page = get_current_record('simple_pages_page', false);
+    if($current_page):
+      if (array_key_exists($current_page->id, $colors)) :
+          return $colors[$current_page->id];
+      endif;
 
-    if (array_key_exists($current_page->id, $colors)) :
-        return $colors[$current_page->id];
+      //determine ancestor
+      $pageAncestors = get_db()->getTable('SimplePagesPage')->findAncestorPages($current_page->id);
+      foreach ($pageAncestors as $page) :
+          if (array_key_exists($page->id, $colors)) :
+              return $colors[$page->id];
+          endif;
+      endforeach;
     endif;
-
-    //determine ancestor
-    $pageAncestors = get_db()->getTable('SimplePagesPage')->findAncestorPages($current_page->id);
-    foreach ($pageAncestors as $page) :
-        if (array_key_exists($page->id, $colors)) :
-            return $colors[$page->id];
-        endif;
-    endforeach;
 
     return $colors['0'];
 }

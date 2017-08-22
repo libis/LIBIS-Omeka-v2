@@ -21,40 +21,24 @@
 </div>
 <section class="home">
     <div id="content" class='container' role="main" tabindex="-1">
-      <div class="row">        
-        <div class="co col-md-6 col-lg-4">
-          <h2>Alma D</h2>
-          <div class="col-content">
-            <img src="<?php echo img("ph/Round.jpg");?>">
-          </div>
-          <a class="block-link" href="">
-          <div class="col-overlay">
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-          </div>
-          </a>
-        </div>
-        <div class="co col-md-6 col-lg-4">
-          <h2>Digital participatie</h2>
-          <div class="col-content">
-            <img src="<?php echo img("placeholder2.jpg");?>">
-          </div>
-          <a class="block-link" href="">
-          <div class="col-overlay">
-            <p>Nullam accumsan, mauris faucibus tempus ornare, nunc eros feugiat magna.</p>
-          </div>
-          </a>
-        </div>
-        <div class="co col-md-6 col-lg-4">
-          <h2>Usecase 3</h2>
-          <div class="col-content">
-            <img src="<?php echo img("libiszine.jpg");?>">
-          </div>
-          <a class="block-link" href="">
-          <div class="col-overlay">
-            <p>Aenean tristique consectetur nibh ut sollicitudin.</p>
-          </div>
-          </a>
-        </div>
+      <div class="row">
+        <?php $usecases = get_usecases();?>
+        <?php if($usecases):?>
+          <?php foreach($usecases as $usecase):?>
+            <div class="co col-md-6 col-lg-4">
+              <h2><?php echo metadata($usecase, array("Dublin Core", "Title"));?></h2>
+              <div class="col-content">
+                <?php echo item_image('square_thumbnail', array(), 0, $usecase);?>
+              </div>
+              <a class="block-link" href="<?php echo metadata($usecase, array("Item Type Metadata", "simple-page"));?>">
+              <div class="col-overlay">
+                  <p><?php echo metadata($usecase, array("Dublin Core", "Description"));?></p>
+              </div>
+              </a>
+            </div>
+          <?php endforeach;?>
+        <?php endif;?>
+
         <div class="co col-md-6 col-lg-4 hidden-lg-up">
           <h2>Onze diensten</h2>
           <ul>
