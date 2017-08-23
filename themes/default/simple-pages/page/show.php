@@ -27,7 +27,7 @@ echo head(array(
                 <h1><?php echo metadata('simple_pages_page', 'title'); ?></h1>
               </div>
             </div>
-            <?php $text = get_dienst_metadata(metadata('simple_pages_page', 'title'),"Description");?>
+            <?php $text = get_dienst_metadata(ucfirst(metadata('simple_pages_page', 'slug')),"Description");?>
             <?php if($text):?>
               <div class='row'>
                 <div class="col-sm-9 col-xs-12">
@@ -63,7 +63,7 @@ echo head(array(
           </div>
           <?php if($dienst["naam"]):?>
             <div class="row">
-              <?php $usecases = get_dienst_usecases(metadata('simple_pages_page', 'title'));?>
+              <?php $usecases = get_dienst_usecases(ucfirst(metadata('simple_pages_page', 'slug')));?>
               <?php if($usecases):?>
                 <?php foreach($usecases as $usecase):?>
                   <div class="co col-md-12">
