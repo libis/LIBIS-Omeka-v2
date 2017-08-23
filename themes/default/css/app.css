@@ -8057,7 +8057,7 @@ header .blauw {
   position: absolute;
   bottom: 0;
   left: 0.9rem;
-  max-width: 88%;
+  width: 86%;
   padding: 1rem;
   background: white;
   border-bottom: 2px solid rgba(179, 182, 187, 0.2);

@@ -5,7 +5,9 @@
       <div class="row">
         <div class="col-md-8">
           <div class="slogan">
-            <p><span>Een korte slagzin</span></p>
+            <?php if ( $description = option('description')): ?>
+            <p><span><?php echo $description; ?></span></p>
+            <?php endif; ?>
           </div>
         </div>
       </div>
