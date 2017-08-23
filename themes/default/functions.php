@@ -8,17 +8,27 @@ function public_nav_main_bootstrap() {
 
 function simple_nav(){
     $page = get_current_record('SimplePagesPage');
+    $dienst = get_color();
 
     $links = simple_pages_get_links_for_children_pages();
-    if(!$links):
+    if(!$links && $page->parent_id != 0):
         $links = simple_pages_get_links_for_children_pages($page->parent_id);
+    elseif(!$links && $page->parent_id == 0):
+        return "";
     endif;
 
-    $html="<ul class='simple-nav'>";
+    $html ="";
+    if($dienst["naam"]):
+      $html .="<h2>Meer over ".$dienst["naam"]."</h2>";
+    endif;
+    $html .="<div class='row'>";
+    $html .="<div class='co col-md-12'>";
+    $html .="<div class='side-nav'>";
+    $html .="<ul class='simple-nav'>";
     foreach($links as $link):
         $html .= "<li><a href='".$link['uri']."'>".$link['label']."</a></li>";
     endforeach;
-    $html .="</ul>";
+    $html .="</ul></div></div></div>";
 
     return $html;
 }

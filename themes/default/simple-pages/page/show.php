@@ -51,16 +51,8 @@ echo head(array(
             </div>
         </div>
         <div class="col-md-4 col-sm-12 side">
-          <div class="row">
-            <div class="co col-md-12">
-              <?php if($dienst["naam"]):?>
-                <h2>Meer over <?php echo $dienst["naam"];?></h2>
-              <?php endif;?>
-              <div class="side-nav">
-                <?php echo simple_nav();?>
-              </div>
-            </div>
-          </div>
+          <?php echo simple_nav();?>
+          
           <?php if($dienst["naam"]):?>
             <div class="row">
               <?php $usecases = get_dienst_usecases(ucfirst(metadata('simple_pages_page', 'slug')));?>
