@@ -48,10 +48,10 @@
               <img src="<?php echo img("LIBISnet_LOGO.png");?>"  alt="LIBISnet" />
             </a></li>
             <li><a href="http://www.heron-net.be/">
-              <img src="<?php echo img("heron_logo.jpg");?>"  alt="LIBISnet" />
+              <img src="<?php echo img("heron_logo.png");?>"  alt="LIBISnet" />
             </a></li>
             <li><a href="http://www.lias.be/">
-              <img src="<?php echo img("lias_logo.jpg");?>"  alt="LIBISnet" />
+              <img src="<?php echo img("lias_logo.png");?>"  alt="LIBISnet" />
             </a></li>
             <li><a href="http://www.libisplus.be/">
               <img src="<?php echo img("LIBISplus_LOGO.png");?>"  alt="LIBISnet" />
@@ -85,7 +85,7 @@
                 <div class="col-md-6">
                     <a href="http://www.heron-net.be/">
                     <div class="deelsite paars">
-                        <div class="deelsite_image"><img src="<?php echo img("heron_logo.jpg");?>" alt="Heron" /></div>
+                        <div class="deelsite_image"><img src="<?php echo img("heron_logo.png");?>" alt="Heron" /></div>
                         <p>
                           Nullam et neque felis. Suspendisse potenti.
                         </p>
@@ -97,7 +97,7 @@
                 <div class="col-md-6">
                     <a href="http://www.lias.be/">
                     <div class="deelsite oranje">
-                        <div class="deelsite_image"><img src="<?php echo img("lias_logo.jpg");?>" alt="Lias" /></div>
+                        <div class="deelsite_image"><img src="<?php echo img("lias_logo.png");?>" alt="Lias" /></div>
                         <p>
                           Ut rhoncus porta lectus, ac placerat est auctor sed.
                         </p>

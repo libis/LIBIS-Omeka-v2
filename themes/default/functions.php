@@ -83,8 +83,8 @@ function get_color()
     //colors: page id -> different css (production)
     $colors = array(
       "0" => array("naam" => "","kleur" => "grijs", "logo" => "libis_gray.png"),
-      "10" => array("naam" => "Heron", "kleur" => "paars", "logo" => "heron_logo.jpg"),//default
-      "13" => array("naam" => "Lias", "kleur" => "oranje", "logo" => "lias_logo.jpg"),
+      "10" => array("naam" => "Heron", "kleur" => "paars", "logo" => "heron_logo.png"),//default
+      "13" => array("naam" => "Lias", "kleur" => "oranje", "logo" => "lias_logo.png"),
       "16" => array("naam" => "LIBISnet", "kleur" => "groen", "logo" => "LIBISnet_LOGO.png"),
       "19" => array("naam" => "LIBISplus", "kleur" => "blauw", "logo" => "LIBISplus_LOGO.png")
     );
