@@ -7949,7 +7949,7 @@ header .blauw {
 
 .jumbotron .row .slogan {
   font-size: 1.8rem;
-  padding: 3rem 2rem 1rem 2rem;
+  padding: 3rem 2rem;
   color: #666;
 }
 
@@ -7966,16 +7966,51 @@ header .blauw {
   border-bottom: 1px solid rgba(255, 255, 255, 0.6);
 }
 
-.jumbotron .row .logo-bars {
-  padding: 0rem 0rem 0.5rem 0rem;
-  margin-bottom: 1rem;
-  text-align: left;
-  height: 0px;
+.jumbotron .row .slogan-dienst {
+  padding: 2rem;
+  font-size: 1.3rem;
+  color: white;
+  margin: 5rem 0 2rem 0;
 }
 
-.jumbotron .row .logo-bars img {
-  width: 120px;
-  height: 0px;
+.jumbotron .row .slogan-dienst span {
+  border-bottom: none;
+}
+
+.jumbotron .row .co-slogan .slogan-logo {
+  margin-top: 2rem;
+  padding: 1rem;
+  background: white;
+}
+
+.jumbotron .row .co-slogan img {
+  width: 100%;
+}
+
+.jumbotron .row .oranje {
+  background: #FD701A;
+}
+
+.jumbotron .row .groen {
+  background: #B6DD00;
+}
+
+.jumbotron .row .paars {
+  background: #C63584;
+}
+
+.jumbotron .row .blauw {
+  background: #0095D5;
+}
+
+.jumbotron .row .about-button a {
+  font-size: 0.9rem;
+  padding: 0.2rem 0.1rem;
+  color: #666;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-bottom: 2px solid #F3CE11;
+  font-family: "Open Sans", sans-serif;
 }
 
 .jumbotron img {

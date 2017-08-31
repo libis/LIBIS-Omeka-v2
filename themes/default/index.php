@@ -3,14 +3,14 @@
   <div class='container' role="main" tabindex="-1">
     <section class="jumbo-section">
       <div class="row">
-        <div class="co-slogan offset-md-1 col-md-7">
+        <div class="co-slogan offset-md-1 col-md-8">
           <div class="slogan">
             <?php if ( $description = option('description')): ?>
             <p><span><?php echo $description; ?></span></p>
             <?php endif; ?>
-            <!--<div class="logo-bars">
-              <img src="<?php echo img('libis_bars.png');?>">
-            </div>-->
+            <div class="about-button">
+              <a href="<?php echo url("over-libis");?>">Lees meer</a>
+            </div>
           </div>
         </div>
       </div>
