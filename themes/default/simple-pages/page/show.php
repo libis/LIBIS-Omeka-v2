@@ -18,14 +18,14 @@ echo head(array(
     <div class='container' role="main" tabindex="-1">
       <section class="jumbo-section">
         <div class="row">
-          <div class="co-slogan col-md-3">
+          <div class="co-slogan col-lg-3">
             <?php if($dienst["logo"]!=""):?>
               <div class="slogan-logo">
                 <img class="dienst-logo" src="<?php echo img($dienst["logo"]);?>">
               </div>
             <?php endif;?>
           </div>
-          <div class="co-slogan col-md-8">
+          <div class="co-slogan col-lg-8">
             <div class="slogan slogan-dienst <?php echo $dienst["kleur"];?>">
               <p><span><?php echo $text; ?></span></p>
             </div>
@@ -38,6 +38,7 @@ echo head(array(
 <div class="content-wrapper simple-page-section ">
   <div class="container simple-page-container">
     <!-- Content -->
+    <?php if(!$text):?>
     <div class="row">
         <div class="col-md-12 col-sm-12 page">
             <div class='row breadcrumbs'>
@@ -47,13 +48,12 @@ echo head(array(
             </div>
             <div class='row top'>
               <div class="col-sm-12 col-xs-12">
-                <?php if(!$text):?>
                   <h1><?php echo metadata('simple_pages_page', 'title'); ?></h1>
-                <?php endif;?>
               </div>
             </div>
         </div>
     </div>
+    <?php endif;?>
     <div class="row">
         <div class="col-md-8 col-sm-12">
             <div class='row content'>

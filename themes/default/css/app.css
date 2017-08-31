@@ -7977,14 +7977,39 @@ header .blauw {
   border-bottom: none;
 }
 
+@media (max-width: 991px) {
+  .jumbotron .row .slogan-dienst {
+    margin: 2rem 0 2rem 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .jumbotron .row .slogan-dienst {
+    font-size: 1rem;
+    padding: 1.5rem;
+  }
+}
+
 .jumbotron .row .co-slogan .slogan-logo {
   margin-top: 2rem;
-  padding: 1rem;
-  background: white;
+  margin-left: 2rem;
 }
 
 .jumbotron .row .co-slogan img {
   width: 100%;
+  padding: 1rem;
+  background: white;
+}
+
+@media (max-width: 991px) {
+  .jumbotron .row .co-slogan .slogan-logo {
+    margin-top: 2rem;
+    padding: 0rem;
+    margin-left: 0rem;
+  }
+  .jumbotron .row .co-slogan img {
+    width: 200px;
+  }
 }
 
 .jumbotron .row .oranje {
@@ -8456,7 +8481,7 @@ section.news .news-container .news-item .datum {
 @media (max-width: 767px) {
   .exhibit-show-section,
   .simple-page-section {
-    padding-top: 0.5rem;
+    padding-top: 1.5rem;
   }
 }
 
@@ -8669,6 +8694,15 @@ section.news .news-container .news-item .datum {
 .exhibit-show-section .co ul li,
 .simple-page-section .co ul li {
   border-top: none;
+}
+
+@media (max-width: 767px) {
+  .exhibit-show-section .co,
+  .simple-page-section .co {
+    margin-bottom: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
 }
 
 .exhibit-show-section .side,
