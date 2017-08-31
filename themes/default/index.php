@@ -3,24 +3,21 @@
   <div class='container' role="main" tabindex="-1">
     <section class="jumbo-section">
       <div class="row">
-        <div class="col-md-8">
+        <div class="co-slogan offset-md-1 col-md-7">
           <div class="slogan">
             <?php if ( $description = option('description')): ?>
             <p><span><?php echo $description; ?></span></p>
             <?php endif; ?>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-12">
-          <div class="logo-bars">
-            <img src="<?php echo img('libis_bars.png');?>">
+            <!--<div class="logo-bars">
+              <img src="<?php echo img('libis_bars.png');?>">
+            </div>-->
           </div>
         </div>
       </div>
     </section>
   </div>
 </div>
+</section>
 <section class="home">
     <div id="content" class='container' role="main" tabindex="-1">
       <div class="row">
@@ -59,15 +56,16 @@
           </ul>
         </div>
       </div>
+
   </div>
 </section>
 <section class="diensten-section hidden-md-down">
     <div class='container' role="main" tabindex="-1">
+      <section class="diensten-section-inside">
       <div class="row">
           <div class="col-md-4 diensten">
             <div class="diensten-titel">
-              <h2><span>Onze diensten</span></h2>
-              <hr align="right">
+              <h2>Onze <span>diensten</span></h2>
             </div>
           </div>
           <div class="col-md-8 diensten">
@@ -116,6 +114,7 @@
               </div>
           </div>
       </div>
+      </section>
   </div>
 </section>
 <section class="home">
@@ -132,13 +131,14 @@
         </div>
 
         <div class="co col-md-6 col-lg-4">
-          <h2>LIBISzine</h2>
+          <?php $lz = get_libiszine();?>
+          <h2><?php echo metadata($lz, array("Dublin Core", "Title"));?></h2>
           <div class="col-content">
-            <img src="<?php echo img("libiszine.jpg");?>">
+            <?php echo item_image('square_thumbnail', array(), 0, $lz);?>
           </div>
-          <a class="block-link" href="">
+          <a class="block-link" href="<?php echo url("libiszine");?>">
           <div class="col-overlay">
-            <p>Ut condimentum vulputate ultricies. Morbi varius ipsum enim.</p>
+              <p><?php echo metadata($lz, array("Dublin Core", "Description"));?></p>
           </div>
           </a>
         </div>

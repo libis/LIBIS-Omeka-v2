@@ -24,16 +24,20 @@ echo head(array(
             </div>
             <div class='row top'>
               <div class="col-sm-12 col-xs-12">
-                <h1><?php echo metadata('simple_pages_page', 'title'); ?></h1>
+                <?php if($dienst["logo"]==""):?>
+                  <h1><?php echo metadata('simple_pages_page', 'title'); ?></h1>
+                <?php else:?>
+                  <img class="dienst-logo" src="<?php echo img($dienst["logo"]);?>">
+                <?php endif;?>
               </div>
             </div>
             <?php $text = get_dienst_metadata(ucfirst(metadata('simple_pages_page', 'slug')),"Description");?>
             <?php if($text):?>
               <div class='row'>
                 <div class="col-sm-10 col-xs-12">
-                  <div class="intro">
+                  <!--<div class="intro <?php echo $dienst["kleur"];?>">
                       <?php echo $text;?>
-                  </div>
+                  </div>-->
                 </div>
               </div>
             <?php endif;?>
@@ -43,6 +47,11 @@ echo head(array(
         <div class="col-md-8 col-sm-12">
             <div class='row content'>
               <div class="col-sm-12 col-xs-12">
+                <?php if($text):?>
+                <div class="intro <?php echo $dienst["kleur"];?>">
+                    <?php echo $text;?>
+                </div>
+                <?php endif;?>
                 <?php
                     $text = metadata('simple_pages_page', 'text', array('no_escape' => true));
                     echo $this->shortcodes($text);
@@ -51,6 +60,7 @@ echo head(array(
             </div>
         </div>
         <div class="col-md-4 col-sm-12 side">
+
           <?php echo simple_nav();?>
 
           <?php if($dienst["naam"]):?>

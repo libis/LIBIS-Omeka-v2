@@ -42,14 +42,10 @@
           <button class="navbar-toggler navbar-toggler-right justify-content-end" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <i class='material-icons'>&#xE5D2;</i>
           </button>
-          <a class="navbar-brand" href="<?php echo WEB_ROOT;?>"><img src="<?php echo img($style['logo']);?>"></a>
+          <a class="navbar-brand" href="<?php echo WEB_ROOT;?>"><img src="<?php echo img('libis_gray.png');?>"></a>
 
           <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
             <?php echo public_nav_main_bootstrap();?>
-            <!--<form class="form-inline my-2 my-lg-0" action="<?php echo url('/search');?>">
-              <input class="form-control mr-sm-1" name="query" type="text" placeholder="Zoek">
-              <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><i class="material-icons">search</i></button>
-            </form>-->
           </div>
           <a class="navbar-toggler-right search-toggle" href="#search"><i class="material-icons">search</i></a>
         </nav>

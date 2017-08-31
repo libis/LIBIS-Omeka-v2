@@ -59,7 +59,7 @@ function get_dienst_metadata($tag,$metadata){
 }
 
 function get_usecases(){
-  $usecases = get_records("Item",array("recent" => true,"type" => "use case"),3);
+  $usecases = get_records("Item",array("featured" => true,"type" => "use case"),3);
 
   if(!$usecases):
     return false;
@@ -78,11 +78,21 @@ function get_dienst_usecases($tag){
   return $usecases;
 }
 
+function get_libiszine(){
+  $lz = get_records("Item",array("type" => "libiszine"),1);
+
+  if(!$lz):
+    return false;
+  endif;
+
+  return $lz[0];
+}
+
 function get_color()
 {
     //colors: page id -> different css (production)
     $colors = array(
-      "0" => array("naam" => "","kleur" => "grijs", "logo" => "libis_gray.png"),
+      "0" => array("naam" => "","kleur" => "grijs", "logo" => ""),
       "10" => array("naam" => "Heron", "kleur" => "paars", "logo" => "heron_logo.png"),//default
       "13" => array("naam" => "Lias", "kleur" => "oranje", "logo" => "lias_logo.png"),
       "16" => array("naam" => "LIBISnet", "kleur" => "groen", "logo" => "LIBISnet_LOGO.png"),
