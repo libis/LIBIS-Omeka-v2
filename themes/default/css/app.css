@@ -7971,7 +7971,7 @@ header .blauw {
 }
 
 .jumbotron .dienst-section {
-  margin: 2rem 0;
+  margin: 2rem;
   padding: 2rem;
 }
 
@@ -8009,10 +8009,6 @@ header .blauw {
     font-size: 1rem;
     text-align: center;
   }
-}
-
-.jumbotron .dienst-section .co-slogan .slogan-logo {
-  margin-right: 1rem;
 }
 
 .jumbotron .dienst-section .co-slogan img {

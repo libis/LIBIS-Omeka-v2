@@ -19,17 +19,17 @@ echo head(array(
     <div class='container' role="main" tabindex="-1">
       <section class="jumbo-section">
         <div class="row">
-          <div class="offset-lg-1 col-lg-10">
+          <div class="col-lg-12">
             <section class="dienst-section <?php echo $dienst["kleur"];?>">
             <div class="row">
-              <div class="co-slogan col-lg-4">
+              <div class="co-slogan col-lg-3">
                 <?php if($dienst["logo"]!=""):?>
                   <div class="slogan-logo">
                     <img class="dienst-logo" src="<?php echo img($dienst["logo"]);?>">
                   </div>
                 <?php endif;?>
               </div>
-              <div class="co-slogan col-lg-8">
+              <div class="co-slogan col-lg-9">
                 <div class="slogan slogan-dienst">
                   <p><span><?php echo $text; ?></span></p>
                 </div>
