@@ -11,16 +11,23 @@ function simple_nav(){
     $dienst = get_color();
 
     $links = simple_pages_get_links_for_children_pages();
+
+    $html ="";
+    if($dienst["naam"] && $page->parent_id == 0):
+      $html .="<h2>Meer over ".$dienst["naam"]."</h2>";
+    endif;
+
+    if($dienst["naam"] && $page->parent_id != 0):
+      $html .="<img class='side-logo' src='".img($dienst["logo"])."'>";
+    endif;
+
     if(!$links && $page->parent_id != 0):
         $links = simple_pages_get_links_for_children_pages($page->parent_id);
     elseif(!$links && $page->parent_id == 0):
         return "";
     endif;
 
-    $html ="";
-    if($dienst["naam"]):
-      $html .="<h2>Meer over ".$dienst["naam"]."</h2>";
-    endif;
+
     $html .="<div class='row'>";
     $html .="<div class='co col-md-12'>";
     $html .="<div class='side-nav'>";

@@ -2,6 +2,7 @@
 $bodyclass = 'page simple-page';
 $dienst = get_color();
 
+
 if ($is_home_page):
     $bodyclass .= ' simple-page-home';
 endif;
@@ -18,17 +19,23 @@ echo head(array(
     <div class='container' role="main" tabindex="-1">
       <section class="jumbo-section">
         <div class="row">
-          <div class="co-slogan col-lg-3">
-            <?php if($dienst["logo"]!=""):?>
-              <div class="slogan-logo">
-                <img class="dienst-logo" src="<?php echo img($dienst["logo"]);?>">
+          <div class="offset-lg-1 col-lg-10">
+            <section class="dienst-section <?php echo $dienst["kleur"];?>">
+            <div class="row">
+              <div class="co-slogan col-lg-4">
+                <?php if($dienst["logo"]!=""):?>
+                  <div class="slogan-logo">
+                    <img class="dienst-logo" src="<?php echo img($dienst["logo"]);?>">
+                  </div>
+                <?php endif;?>
               </div>
-            <?php endif;?>
-          </div>
-          <div class="co-slogan col-lg-8">
-            <div class="slogan slogan-dienst <?php echo $dienst["kleur"];?>">
-              <p><span><?php echo $text; ?></span></p>
+              <div class="co-slogan col-lg-8">
+                <div class="slogan slogan-dienst">
+                  <p><span><?php echo $text; ?></span></p>
+                </div>
+              </div>
             </div>
+            </section>
           </div>
         </div>
       </section>
@@ -66,7 +73,6 @@ echo head(array(
             </div>
         </div>
         <div class="col-md-4 col-sm-12 side">
-
           <?php echo simple_nav();?>
 
           <?php if($dienst["naam"]):?>

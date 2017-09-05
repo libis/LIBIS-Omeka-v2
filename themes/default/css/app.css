@@ -7832,6 +7832,10 @@ header {
   font-size: 1.5rem;
 }
 
+.small-nav .navbar-brand img {
+  height: 45px;
+}
+
 header .oranje {
   border-top: 3px solid #FD701A;
 }
@@ -7947,14 +7951,14 @@ header .blauw {
   margin-bottom: 1rem;
 }
 
-.jumbotron .row .slogan {
+.jumbotron .slogan {
   font-size: 1.8rem;
   padding: 3rem 2rem;
   color: #666;
 }
 
 @media (max-width: 991px) {
-  .jumbotron .row .slogan {
+  .jumbotron .slogan {
     font-size: 1.4rem;
     min-height: 0px;
     margin: 1rem;
@@ -7962,73 +7966,91 @@ header .blauw {
   }
 }
 
-.jumbotron .row .slogan span {
+.jumbotron .slogan span {
   border-bottom: 1px solid rgba(255, 255, 255, 0.6);
 }
 
-.jumbotron .row .slogan-dienst {
+.jumbotron .dienst-section {
+  margin: 2rem 0;
   padding: 2rem;
-  font-size: 1.3rem;
-  color: white;
-  margin: 5rem 0 2rem 0;
-}
-
-.jumbotron .row .slogan-dienst span {
-  border-bottom: none;
 }
 
 @media (max-width: 991px) {
-  .jumbotron .row .slogan-dienst {
-    margin: 2rem 0 2rem 0;
+  .jumbotron .dienst-section {
+    margin: 1rem 0;
   }
 }
 
 @media (max-width: 767px) {
-  .jumbotron .row .slogan-dienst {
+  .jumbotron .dienst-section {
     font-size: 1rem;
-    padding: 1.5rem;
+    padding: 1rem;
   }
 }
 
-.jumbotron .row .co-slogan .slogan-logo {
-  margin-top: 2rem;
-  margin-left: 2rem;
+.jumbotron .dienst-section .slogan-dienst {
+  font-size: 1.2rem;
+  color: white;
+  padding: 0rem;
 }
 
-.jumbotron .row .co-slogan img {
+.jumbotron .dienst-section .slogan-dienst span {
+  border-bottom: none;
+}
+
+@media (max-width: 991px) {
+  .jumbotron .dienst-section .slogan-dienst {
+    margin: 1rem 0 0rem 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .jumbotron .dienst-section .slogan-dienst {
+    font-size: 1rem;
+    text-align: center;
+  }
+}
+
+.jumbotron .dienst-section .co-slogan .slogan-logo {
+  margin-right: 1rem;
+}
+
+.jumbotron .dienst-section .co-slogan img {
   width: 100%;
   padding: 1rem;
   background: white;
 }
 
 @media (max-width: 991px) {
-  .jumbotron .row .co-slogan .slogan-logo {
-    margin-top: 2rem;
+  .jumbotron .dienst-section .co-slogan .slogan-logo {
+    margin-top: 0rem;
     padding: 0rem;
     margin-left: 0rem;
+    text-align: center;
   }
-  .jumbotron .row .co-slogan img {
-    width: 200px;
+  .jumbotron .dienst-section .co-slogan img {
+    width: 100%;
+    max-width: 250px;
   }
 }
 
-.jumbotron .row .oranje {
+.jumbotron .oranje {
   background: #FD701A;
 }
 
-.jumbotron .row .groen {
+.jumbotron .groen {
   background: #B6DD00;
 }
 
-.jumbotron .row .paars {
+.jumbotron .paars {
   background: #C63584;
 }
 
-.jumbotron .row .blauw {
+.jumbotron .blauw {
   background: #0095D5;
 }
 
-.jumbotron .row .about-button a {
+.jumbotron .about-button a {
   font-size: 0.9rem;
   padding: 0.2rem 0.1rem;
   color: #666;
@@ -8286,78 +8308,84 @@ header .blauw {
   border-bottom: 2px solid #0095D5;
 }
 
-section.news .row:first-child {
-  background: white;
-}
+/*
+section.news{
+  .row:first-child{
+    background: white;
+  }
 
-section.news .news-home {
-  padding-bottom: 2rem;
-}
+  .news-home{
+      padding-bottom:2rem;
 
-section.news .news-home a {
-  color: #242424;
-}
+      a{
+        color: $dark;
+      }
 
-section.news .news-home h2 {
-  margin: 0;
-  padding: 2rem 0rem 2rem 0rem;
-  font-weight: 300;
-  font-family: "Open Sans", sans-serif;
-  font-size: 2.6rem;
-}
+      h2{
+        margin:0;
+        padding: 2rem 0rem 2rem 0rem;
+        font-weight:300;
+        font-family: $font-family-sans-serif;
+        font-size: 2.6rem;
+      }
 
-section.news .news-home h3 {
-  font-size: 1.5rem;
-  color: rgba(36, 36, 36, 0.8);
-  font-weight: 600;
-  font-family: "Open Sans", sans-serif;
-}
+      h3{
+        font-size: 1.5rem;
+        color: rgba($dark,0.8);
+        font-weight:600;
+        font-family: $font-family-sans-serif;
+      }
 
-section.news .news-home .news-item {
-  margin-top: 0rem;
-  margin-bottom: 0rem;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-  border-top: 1px solid rgba(179, 182, 187, 0.2);
-  transition: all 0.3s ease 0s;
-}
+      .news-item{
+        margin-top: 0rem;
+        margin-bottom: 0rem;
+        padding-top:2rem;
+        padding-bottom:2rem;
+        border-top: 1px solid rgba($brand-primary,0.2);
+        transition: all 0.3s ease 0s;
+      }
 
-section.news .news-home .news-item:hover {
-  background: rgba(36, 36, 36, 0.1);
-}
+      .news-item:hover{
+        background: rgba($dark,0.1);
+      }
 
-section.news .news-home img {
-  width: 100%;
-  margin-bottom: 1rem;
-}
+      img{
+        width:100%;
+        margin-bottom:1rem;
+      }
 
-section.news .news-home .more-news {
-  text-align: right;
-  padding: 1rem 0;
-  margin-top: 1rem;
-}
+      .more-news{
+        text-align: right;
+        padding: 1rem 0;
+        margin-top:1rem;
 
-section.news .news-home .more-news a {
-  font-family: "Open Sans", sans-serif;
-  padding: 10px;
-  border: 1px solid #B3B6BB;
-  border-radius: 1px;
-  font-weight: 900;
-  transition: all 0.3s ease 0s;
-  color: #B3B6BB;
-}
+        a{
+          font-family: $font-family-sans-serif;
+          padding:10px;
+          border:1px solid $brand-primary;
+          border-radius: 1px;
+          font-weight:900;
+          transition: all 0.3s ease 0s;
+          color: $brand-primary;
+        }
 
-section.news .news-home .more-news a:hover {
-  background: #B3B6BB;
-  color: white;
-  text-decoration: none;
-}
+        a:hover{
+          background: $brand-primary;
+          color:white;
+          text-decoration: none;
+        }
+      }
+  }
 
-section.news .news-container .news-item .datum {
-  font-size: 90%;
-  color: rgba(36, 36, 36, 0.5);
-}
-
+  .news-container{
+    .news-item{
+      .datum{
+        font-size: 90%;
+        color: rgba($dark,0.5);
+      }
+    }
+  }
+}*/
 .breadcrumbs #simple-pages-breadcrumbs {
   margin: 0;
 }
@@ -8716,6 +8744,12 @@ section.news .news-container .news-item .datum {
   text-transform: uppercase;
 }
 
+.exhibit-show-section .side .side-logo,
+.simple-page-section .side .side-logo {
+  margin-bottom: 1rem;
+  width: 250px;
+}
+
 .exhibit-show-section .side-nav,
 .simple-page-section .side-nav {
   font-family: "Open Sans", sans-serif;
@@ -8759,234 +8793,6 @@ section.news .news-container .news-item .datum {
   .simple-page-section .side-nav li:first-of-type {
     border-top: none;
   }
-}
-
-.solr-section-search {
-  padding: 0;
-  background: rgba(36, 36, 36, 0.3);
-}
-
-.solr-section-search .solr-container {
-  background: rgba(36, 36, 36, 0.1);
-  color: white;
-}
-
-@media (max-width: 767px) {
-  .solr-section-search .solr-container {
-    padding: 1rem;
-  }
-}
-
-.solr-section-search .solr-container h1 {
-  margin-bottom: 1.2rem;
-  font-size: 2rem;
-  font-weight: 100;
-  font-family: "Open Sans", sans-serif;
-}
-
-.solr-section-search .search-bar-solr {
-  background: rgba(36, 36, 36, 0.05);
-}
-
-.solr-section-search .search-bar-solr .solr {
-  padding-top: 40px;
-  padding-bottom: 25px;
-}
-
-.solr-section-search .search-bar-solr #solr-search-form {
-  padding-bottom: 0rem;
-}
-
-.solr-section-search .search-bar-solr #solr-search-form button {
-  background: none;
-  text-transform: uppercase;
-  color: white;
-  border: none;
-  margin: 0 0 0 0;
-  line-height: 2;
-  display: inline-block;
-}
-
-.solr-section-search .search-bar-solr #solr-search-form button i {
-  vertical-align: middle;
-  font-size: 2.5rem;
-}
-
-.solr-section-search .search-bar-solr #solr-search-form input[type="text"] {
-  border: none;
-  padding: 0 20px;
-  height: 3rem;
-  min-width: 200px;
-  display: inline-block;
-  font-size: 1.1rem;
-  line-height: 1;
-  color: rgba(51, 51, 51, 0.8);
-  width: 90%;
-  max-width: 600px;
-}
-
-@media (max-width: 767px) {
-  .solr-section-search .search-bar-solr #solr-search-form input[type="text"] {
-    width: 80%;
-    min-width: 200px;
-  }
-}
-
-.solr-section-search .lecture-info {
-  padding-top: 25px;
-  padding-bottom: 25px;
-  background: rgba(36, 36, 36, 0.2);
-}
-
-.solr-section-search .lecture-info p {
-  font-size: 0.9rem;
-  font-family: "Open Sans", sans-serif;
-  color: rgba(255, 255, 255, 0.8);
-}
-
-.solr-section-search .lecture-info p:last-child {
-  margin-bottom: 0;
-}
-
-.solr-section-applied {
-  background: #eee;
-}
-
-.solr-section-applied .solr-container {
-  padding: 0;
-  background: rgba(36, 36, 36, 0.05);
-}
-
-.solr-section-applied #solr-applied-facets ul {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-  line-height: 1.2rem;
-}
-
-.solr-section-applied #solr-applied-facets ul li {
-  background: rgba(36, 36, 36, 0.1);
-  width: auto;
-  display: inline-block;
-  margin: 0;
-  padding: 0.8rem 1rem;
-  font-size: 1rem;
-  vertical-align: middle;
-  line-height: 1.2rem;
-}
-
-.solr-section-applied #solr-applied-facets ul li a {
-  color: #fff;
-}
-
-.solr-section-applied #solr-applied-facets ul li a i {
-  line-height: 1.2rem;
-  vertical-align: middle;
-  font-size: 1rem;
-  font-weight: bold;
-  margin-left: 4px;
-}
-
-.solr-section-results {
-  position: relative;
-  padding: 0rem;
-}
-
-@media (max-width: 767px) {
-  .solr-section-results {
-    margin-top: 0px;
-  }
-}
-
-.solr-section-results .solr-container {
-  background: #eee;
-}
-
-.solr-section-results .solr-results {
-  padding: 2rem;
-  background: white;
-}
-
-@media (max-width: 767px) {
-  .solr-section-results .solr-results {
-    padding: 1rem;
-  }
-}
-
-.solr-section-results h1 {
-  margin-bottom: 2rem;
-  text-transform: uppercase;
-  font-weight: bold;
-}
-
-.solr-section-results .content {
-  padding: 3rem 0;
-}
-
-.solr-section-results h2 {
-  font-weight: 300;
-  font-size: 1.3rem;
-  color: rgba(51, 51, 51, 0.8);
-  margin-bottom: 15px;
-  font-family: "Open Sans", sans-serif;
-}
-
-.solr-section-results .result {
-  padding: 1rem;
-  background: white;
-  border-bottom: 2px solid #fff;
-}
-
-.solr-section-results .result h2 {
-  font-weight: 800;
-}
-
-.solr-section-results .result img {
-  width: 100%;
-}
-
-@media (max-width: 767px) {
-  .solr-section-results .result img {
-    margin-bottom: 1rem;
-  }
-}
-
-.solr-section-results .result .result-title {
-  font-size: 1.2rem;
-}
-
-.solr-section-results #solr-facets {
-  padding: 2rem;
-}
-
-@media (max-width: 767px) {
-  .solr-section-results #solr-facets {
-    padding: 1rem;
-  }
-}
-
-.solr-section-results #solr-facets strong {
-  font-size: 1rem;
-  font-family: "Open Sans", sans-serif;
-  color: rgba(36, 36, 36, 0.8);
-}
-
-.solr-section-results #solr-facets ul {
-  margin: 5px 0;
-  list-style: none;
-  padding-left: 15px;
-}
-
-.solr-section-results #solr-facets ul li {
-  font-size: 1rem;
-}
-
-.solr-section-results #solr-facets ul li a {
-  color: rgba(36, 36, 36, 0.8);
-}
-
-.solr-section-results #solr-facets ul li:before {
-  content: "\203A";
 }
 
 footer {
