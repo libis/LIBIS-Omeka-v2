@@ -7836,6 +7836,17 @@ header {
   height: 45px;
 }
 
+.small-nav .navbar-toggler {
+  top: 2.1rem !important;
+}
+
+.small-nav .search-toggle {
+  right: 0px;
+  color: #B3B6BB !important;
+  display: block;
+  top: 2rem !important;
+}
+
 header .oranje {
   border-top: 3px solid #FD701A;
 }
