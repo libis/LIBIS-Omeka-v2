@@ -7963,7 +7963,7 @@ header .blauw {
 }
 
 .jumbotron .slogan {
-  font-size: 1.8rem;
+  font-size: 1.3rem;
   padding: 3rem 2rem;
   color: #666;
 }
@@ -7979,6 +7979,19 @@ header .blauw {
 
 .jumbotron .slogan span {
   border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+.jumbotron .slogan .about-button {
+  text-align: right;
+}
+
+.jumbotron .slogan .about-button a {
+  font-size: 0.9rem;
+  padding: 0.2rem 0.1rem;
+  color: #666;
+  font-weight: bold;
+  border-bottom: 2px solid #F3CE11;
+  font-family: "Open Sans", sans-serif;
 }
 
 .jumbotron .dienst-section {
@@ -8055,16 +8068,6 @@ header .blauw {
 
 .jumbotron .blauw {
   background: #0095D5;
-}
-
-.jumbotron .about-button a {
-  font-size: 0.9rem;
-  padding: 0.2rem 0.1rem;
-  color: #666;
-  font-weight: bold;
-  text-transform: uppercase;
-  border-bottom: 2px solid #F3CE11;
-  font-family: "Open Sans", sans-serif;
 }
 
 .jumbotron img {

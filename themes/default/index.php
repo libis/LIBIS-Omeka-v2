@@ -5,9 +5,11 @@
       <div class="row">
         <div class="co-slogan offset-md-1 col-md-8">
           <div class="slogan">
-            <?php if ( $description = option('description')): ?>
+            <!--<?php if ( $description = option('description')): ?>
             <p><span><?php echo $description; ?></span></p>
-            <?php endif; ?>
+          <?php endif; ?>-->
+            <p><span>LIBIS heeft meer dan 40 jaar ervaring met het aanbieden van betrouwbare, flexibele en tegelijkertijd innovatieve informatieoplossingen voor bibliotheken, archieven, onderwijs-, onderzoeks-, erfgoed- en publieke instellingen.</span></p>
+            <p><span>Met een team van 20 ervaren medewerkers biedt LIBIS – gedreven door klantentevredenheid en innovatie – hoogwaardige diensten voor het beheren, ontsluiten en bewaren van uw collecties.</span></p>
             <div class="about-button">
               <a href="<?php echo url("over-libis");?>">Lees meer</a>
             </div>
@@ -75,7 +77,7 @@
                     <div class="deelsite groen">
                         <div class="deelsite_image"><img src="<?php echo img("LIBISnet_LOGO.png");?>"  alt="LIBISnet" /></div>
                         <p>
-                          Integer a velit in ligula rutrum congue sit amet at justo.
+                          Next-generation platform voor uw bibliotheek
                         </p>
                     </div>
                     </a>
@@ -85,7 +87,7 @@
                     <div class="deelsite paars">
                         <div class="deelsite_image"><img src="<?php echo img("heron_logo.png");?>" alt="Heron" /></div>
                         <p>
-                          Nullam et neque felis. Suspendisse potenti.
+                          Flexibel collectiebeheer & Innovatieve ontsluiting
                         </p>
                     </div>
                     </a>
@@ -97,7 +99,7 @@
                     <div class="deelsite oranje">
                         <div class="deelsite_image"><img src="<?php echo img("lias_logo.png");?>" alt="Lias" /></div>
                         <p>
-                          Ut rhoncus porta lectus, ac placerat est auctor sed.
+                          Geïntegreerde archiefoplossing voor uw colelcties
                         </p>
                     </div>
                     </a>
@@ -107,7 +109,8 @@
                     <div class="deelsite blauw">
                         <div class="deelsite_image"> <img src="<?php echo img("LIBISplus_LOGO.png");?>" alt="LIBIS&#43;" /></div>
                         <p>
-                          Integer a velit in ligula rutrum congue sit amet at justo.</p>
+                          Zoveel meer: Mirador, expertise delen, ondersteuning onderzoekdata
+                        </p>
                     </div>
                     </a>
                 </div>
