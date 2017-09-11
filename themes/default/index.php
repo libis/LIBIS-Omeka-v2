@@ -9,7 +9,7 @@
             <p><span><?php echo $description; ?></span></p>
           <?php endif; ?>-->
             <p><span>LIBIS heeft meer dan 40 jaar ervaring met het aanbieden van betrouwbare, flexibele en tegelijkertijd innovatieve informatieoplossingen voor bibliotheken, archieven, onderwijs-, onderzoeks-, erfgoed- en publieke instellingen.</span></p>
-            <p><span>Met een team van 20 ervaren medewerkers biedt LIBIS – gedreven door klantentevredenheid en innovatie – hoogwaardige diensten voor het beheren, ontsluiten en bewaren van uw collecties.</span></p>
+          
             <div class="about-button">
               <a href="<?php echo url("over-libis");?>">Lees meer</a>
             </div>
