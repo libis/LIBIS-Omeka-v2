@@ -7674,6 +7674,10 @@ p {
   font-family: "Quicksand", sans-serif;
 }
 
+p + ul {
+  margin-top: -1.4rem;
+}
+
 a {
   transition: all 0.5s ease;
   color: rgba(51, 51, 51, 0.5);
