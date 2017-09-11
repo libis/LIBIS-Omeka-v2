@@ -5,11 +5,10 @@
       <div class="row">
         <div class="co-slogan offset-md-1 col-md-8">
           <div class="slogan">
-            <!--<?php if ( $description = option('description')): ?>
+            <?php if ( $description = option('description')): ?>
             <p><span><?php echo $description; ?></span></p>
-          <?php endif; ?>-->
-            <p><span>LIBIS heeft meer dan 40 jaar ervaring met het aanbieden van betrouwbare, flexibele en tegelijkertijd innovatieve informatieoplossingen voor bibliotheken, archieven, onderwijs-, onderzoeks-, erfgoed- en publieke instellingen.</span></p>
-          
+            <?php endif; ?>
+            
             <div class="about-button">
               <a href="<?php echo url("over-libis");?>">Lees meer</a>
             </div>
