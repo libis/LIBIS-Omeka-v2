@@ -13,10 +13,10 @@
                 <div class="row">
                     <div class="col-xs-12 col-xl-12">
                         <ul>
-                            <li><a href="">Menu item 1</a></li>
-                            <li><a href="">Menu item 1</a></li>
-                            <li><a href="">Menu item 1</a></li>
-                            <li><a href="">Menu item 1</a></li>
+                            <li><a href="<?php echo url("/");?>">Home</a></li>
+                            <li><a href="<?php echo url("ons-team");?>">Ons team</a></li>
+                            <li><a href="<?php echo url("contact");?>">Contact</a></li>
+                            <li><a href="https://extranet.libis.be/">Extranet</a></li>                            
                         </ul>
                     </div>
                 </div>
