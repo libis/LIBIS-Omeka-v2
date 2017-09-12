@@ -18,7 +18,7 @@ function simple_nav(){
     endif;
 
     if($dienst["naam"] && $page->parent_id != 0):
-      $html .="<img class='side-logo' src='".img($dienst["logo"])."'>";
+      $html .="<a href='".$dienst["site"]."'><img class='side-logo' src='".img($dienst["logo"])."'></a>";
     endif;
 
     if(!$links && $page->parent_id != 0):
@@ -99,11 +99,11 @@ function get_color()
 {
     //colors: page id -> different css (production)
     $colors = array(
-      "0" => array("naam" => "","kleur" => "grijs", "logo" => ""),
-      "10" => array("naam" => "Heron", "kleur" => "paars", "logo" => "heron_logo.png"),//default
-      "13" => array("naam" => "Lias", "kleur" => "oranje", "logo" => "lias_logo.png"),
-      "16" => array("naam" => "LIBISnet", "kleur" => "groen", "logo" => "LIBISnet_LOGO.png"),
-      "19" => array("naam" => "LIBISplus", "kleur" => "blauw", "logo" => "LIBISplus_LOGO.png")
+      "0" => array("naam" => "","kleur" => "grijs", "logo" => "","site" => ""),
+      "10" => array("naam" => "Heron", "kleur" => "paars", "logo" => "heron_logo.png","site" => "http://heron-net.be"),//default
+      "13" => array("naam" => "Lias", "kleur" => "oranje", "logo" => "lias_logo.png","site" => "http://lias.be"),
+      "16" => array("naam" => "LIBISnet", "kleur" => "groen", "logo" => "LIBISnet_LOGO.png","site" => "http://libisnet.be"),
+      "19" => array("naam" => "LIBISplus", "kleur" => "blauw", "logo" => "LIBISplus_LOGO.png","site" => "http://libisplus.be")
     );
 
     //get current page
