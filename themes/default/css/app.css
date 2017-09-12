@@ -8769,6 +8769,38 @@ section.news{
   width: 250px;
 }
 
+.exhibit-show-section .side .lias-zoek input,
+.simple-page-section .side .lias-zoek input {
+  padding: 5px;
+  width: 75%;
+  border: 1px solid rgba(246, 136, 50, 0.5);
+  margin-bottom: 0.5rem;
+}
+
+.exhibit-show-section .side .lias-zoek .button,
+.simple-page-section .side .lias-zoek .button {
+  width: 20%;
+  background: #F68832;
+  color: white;
+}
+
+.exhibit-show-section .side .lias-zoek .handleiding,
+.simple-page-section .side .lias-zoek .handleiding {
+  float: right;
+  font-size: 0.9rem;
+}
+
+.exhibit-show-section .side .lias-zoek .lias-meer,
+.simple-page-section .side .lias-zoek .lias-meer {
+  clear: both;
+  color: #F68832;
+}
+
+.exhibit-show-section .side .lias-zoek .lias-meer a,
+.simple-page-section .side .lias-zoek .lias-meer a {
+  color: #F68832;
+}
+
 .exhibit-show-section .side-nav,
 .simple-page-section .side-nav {
   font-family: "Open Sans", sans-serif;

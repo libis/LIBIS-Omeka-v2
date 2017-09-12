@@ -76,6 +76,45 @@ echo head(array(
           <?php echo simple_nav();?>
 
           <?php if($dienst["naam"]):?>
+            <?php if($dienst["naam"] == "LIBISnet"):?>
+            <div class="row">
+              <div class="co col-md-12">
+                <h2>Zoeken in Limo</h2>
+                <iframe scrolling="no" src="https://services.libis.be/query/search_widget/index.html#institution=KUL&amp;view=KULeuven&amp;tab=1&amp;host=limo.libis.be" marginwidth="0" marginheight="0" id="limo_search_widget" width="100%" height="90" frameborder="0"></iframe>
+              </div>
+            </div>
+            <?php endif;?>
+            <?php if($dienst["naam"] == "LIBISplus"):?>
+            <div class="row">
+              <div class="co col-md-12">
+                <h2>Zoeken in Lirias</h2>
+                <div class="lirias">
+                <iframe scrolling="no" allowtransparency="" src="https://services.libis.be/query/search_widget/lirias.html#institution=ASSOC" style="width: 340px; height: 60px" frameborder="0"></iframe>
+                </div>
+              </div>
+            </div>
+            <?php endif;?>
+            <?php if($dienst["naam"] == "Lias"):?>
+            <div class="row">
+              <div class="co col-md-12 lias-zoek">
+          			<h2>Zoeken in Lias</h2>
+          			<form method="GET" action="http://abs.lias.be/Query/parametersuche.aspx">
+          				<input name="Volltext" class="search-field-box" onclick="this.value='';" value="Zoeken in archieven" alt="Zoeken in archieven" title="Zoeken in archieven" type="text">
+          				<input class="button" value="Zoek" type="submit">
+          			</form>
+          			<form method="GET" action="http://aleph08.libis.kuleuven.be:8881/R/">
+          				<input name="request1" class="search-field-box" onclick="this.value='';" value="Zoeken in e-depot" alt="Zoeken in e-depot" title="Zoeken in e-depot" type="text">
+          				<input name="func" value="search-advanced-go" type="hidden">
+          				<input name="find_code1" value="WAZ" type="hidden">
+          				<input class="button" value="Zoek" type="submit">
+          			</form>
+                <div class="lias-meer">
+          			     <a href="http://abs.lias.be/Query/feldsuche.aspx">Uitgebreid zoeken</a> | <a href="/zoeken-in-lias">Handleiding</a>
+          			     <br><a href="http://abs.lias.be/Query/archivplansuche.aspx">Blader door archieven</a>
+                </div>
+              </div>
+            </div>
+            <?php endif;?>
             <div class="row">
               <?php $usecases = get_dienst_usecases(ucfirst(metadata('simple_pages_page', 'slug')));?>
               <?php if($usecases):?>
