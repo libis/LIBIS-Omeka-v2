@@ -16,13 +16,13 @@
                             <li><a href="<?php echo url("/");?>">Home</a></li>
                             <li><a href="<?php echo url("ons-team");?>">Ons team</a></li>
                             <li><a href="<?php echo url("contact");?>">Contact</a></li>
-                            <li><a href="https://extranet.libis.be/">Extranet</a></li>                            
+                            <li><a href="https://extranet.libis.be/">Extranet</a></li>
                         </ul>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-xs-12 col-xl-12">
-                        <div class="copyright">© test</div>
+                        <div class="copyright">© LIBIS</div>
                     </div>
                 </div>
             </div>
