@@ -8020,6 +8020,7 @@ header .blauw {
   font-size: 1.2rem;
   color: white;
   padding: 0rem;
+  text-align: justify;
 }
 
 .jumbotron .dienst-section .slogan-dienst span {
