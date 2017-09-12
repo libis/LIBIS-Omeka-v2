@@ -8,7 +8,7 @@
             <?php if ( $description = option('description')): ?>
             <p><span><?php echo $description; ?></span></p>
             <?php endif; ?>
-            
+
             <div class="about-button">
               <a href="<?php echo url("over-libis");?>">Lees meer</a>
             </div>
@@ -76,7 +76,7 @@
                     <div class="deelsite groen">
                         <div class="deelsite_image"><img src="<?php echo img("LIBISnet_LOGO.png");?>"  alt="LIBISnet" /></div>
                         <p>
-                          Next-generation platform voor uw bibliotheek
+                          Next-generation platform voor uw bibliotheekcollecties
                         </p>
                     </div>
                     </a>
@@ -86,7 +86,7 @@
                     <div class="deelsite paars">
                         <div class="deelsite_image"><img src="<?php echo img("heron_logo.png");?>" alt="Heron" /></div>
                         <p>
-                          Flexibel collectiebeheer & Innovatieve ontsluiting
+                          Flexibel collectiebeheer en innovatieve ontsluiting
                         </p>
                     </div>
                     </a>
@@ -98,7 +98,7 @@
                     <div class="deelsite oranje">
                         <div class="deelsite_image"><img src="<?php echo img("lias_logo.png");?>" alt="Lias" /></div>
                         <p>
-                          Geïntegreerde archiefoplossing voor uw colelcties
+                          Geïntegreerde archiefoplossing voor uw collecties
                         </p>
                     </div>
                     </a>
@@ -108,7 +108,7 @@
                     <div class="deelsite blauw">
                         <div class="deelsite_image"> <img src="<?php echo img("LIBISplus_LOGO.png");?>" alt="LIBIS&#43;" /></div>
                         <p>
-                          Zoveel meer: Mirador, expertise delen, ondersteuning onderzoekdata
+                          Zoveel meer: Mirador, expertise delen, ondersteuning onderzoekdata ...
                         </p>
                     </div>
                     </a>

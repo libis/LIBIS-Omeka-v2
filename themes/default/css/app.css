@@ -7852,7 +7852,7 @@ header {
 }
 
 header .oranje {
-  border-top: 3px solid #FD701A;
+  border-top: 3px solid #F68832;
 }
 
 header .groen {
@@ -8059,7 +8059,7 @@ header .blauw {
 }
 
 .jumbotron .oranje {
-  background: #FD701A;
+  background: #F68832;
 }
 
 .jumbotron .groen {
@@ -8297,7 +8297,7 @@ header .blauw {
 
 .diensten .deelsite p {
   padding-top: 1rem;
-  font-size: 1.2rem;
+  font-size: 1.15rem;
 }
 
 .diensten .deelsite img {
@@ -8307,7 +8307,7 @@ header .blauw {
 }
 
 .diensten .oranje:hover {
-  border-bottom: 2px solid #FD701A;
+  border-bottom: 2px solid #F68832;
 }
 
 .diensten .groen:hover {
@@ -8678,7 +8678,7 @@ section.news{
 
 .exhibit-show-section .oranje,
 .simple-page-section .oranje {
-  background: #FD701A;
+  background: #F68832;
 }
 
 .exhibit-show-section .groen,
