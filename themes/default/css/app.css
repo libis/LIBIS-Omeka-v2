@@ -8023,6 +8023,10 @@ header .blauw {
   text-align: justify;
 }
 
+.jumbotron .dienst-section .slogan-dienst p {
+  margin-bottom: 0;
+}
+
 .jumbotron .dienst-section .slogan-dienst span {
   border-bottom: none;
 }
