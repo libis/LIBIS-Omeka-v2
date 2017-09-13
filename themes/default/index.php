@@ -64,7 +64,7 @@
 
   </div>
 </section>
-<section class="diensten-section hidden-md-down">
+<section id="onze-diensten" class="diensten-section hidden-md-down">
     <div class='container' role="main" tabindex="-1">
       <section class="diensten-section-inside">
       <div class="row">
