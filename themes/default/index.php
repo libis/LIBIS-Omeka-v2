@@ -3,7 +3,7 @@
   <div class='container' role="main" tabindex="-1">
     <section class="jumbo-section">
       <div class="row">
-        <div class="co-slogan offset-md-1 col-md-8">
+        <div class="co-slogan col-md-8">
           <div class="slogan">
             <?php if ( $description = option('description')): ?>
             <p><span><?php echo $description; ?></span></p>
@@ -38,6 +38,10 @@
             </div>
           <?php endforeach;?>
         <?php endif;?>
+        <!--<div class="co col-md-12 col-lg-12">
+          <h2>Zoeken in Limo</h2>
+          <iframe scrolling="no" src="https://services.libis.be/query/search_widget/index.html#institution=KUL&amp;view=KULeuven&amp;tab=1&amp;host=limo.libis.be" marginwidth="0" marginheight="0" id="limo_search_widget" width="100%" height="90" frameborder="0"></iframe>
+        </div>-->
 
         <div class="co col-md-6 col-lg-4 hidden-lg-up">
           <h2>Onze diensten</h2>
