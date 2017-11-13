@@ -41,13 +41,13 @@ class SimpleContactForm_IndexController extends Omeka_Controller_AbstractActionC
 	    $email = $this->getRequest()->getPost('email');
 	    // ZF ReCaptcha ignores the 1st arg.
 	    if ($captcha and !$captcha->isValid('foo', $_POST)) {
-            $this->flashError('Your CAPTCHA submission was invalid, please try again.');
+            $this->_helper->flashMessenger(__('Your CAPTCHA submission was invalid, please try again.'));
             $valid = false;
 	    } else if (!Zend_Validate::is($email, 'EmailAddress')) {
-            $this->flashError('Please enter a valid email address.');
+            $this->_helper->flashMessenger(__('Please enter a valid email address.'));
             $valid = false;
 	    } else if (empty($msg)) {
-            $this->flashError('Please enter a message.');
+            $this->_helper->flashMessenger(__('Please enter a message.'));
             $valid = false;
 	    }
 
@@ -70,7 +70,7 @@ class SimpleContactForm_IndexController extends Omeka_Controller_AbstractActionC
         $forwardToEmail = get_option('simple_contact_form_forward_to_email');
 
         if (!empty($forwardToEmail)) {
-            $mail = new Zend_Mail();
+            $mail = new Zend_Mail('UTF-8');
             $mail->setBodyText(get_option('simple_contact_form_admin_notification_email_message_header') . "\n\n" . $formMessage);
             $mail->setFrom($formEmail, $formName);
             $mail->addTo($forwardToEmail);
@@ -81,7 +81,7 @@ class SimpleContactForm_IndexController extends Omeka_Controller_AbstractActionC
         //notify the user who sent the message
         $replyToEmail = get_option('simple_contact_form_reply_from_email');
         if (!empty($replyToEmail)) {
-            $mail = new Zend_Mail();
+            $mail = new Zend_Mail('UTF-8');
             $mail->setBodyText(get_option('simple_contact_form_user_notification_email_message_header') . "\n\n" . $formMessage);
             $mail->setFrom($replyToEmail);
             $mail->addTo($formEmail, $formName);

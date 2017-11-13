@@ -8846,6 +8846,20 @@ section.news{
   }
 }
 
+#flash {
+  color: red;
+}
+
+#flash ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#flash ul .alert {
+  padding-left: 0;
+}
+
 footer {
   background: #eee;
   padding: 0rem 0;

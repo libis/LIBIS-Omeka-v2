@@ -9,16 +9,6 @@ echo head(array('title' => $title, 'bodyclass' => 'exhibits browse'));
           <div class='content'>
             <h1><?php echo $title; ?> <?php echo __('(%s total)', $total_results); ?></h1>
             <?php if (count($exhibits) > 0): ?>
-
-            <!--<nav class="navigation secondary-nav">
-                <?php echo nav(array(
-                    array(
-                        'label' => __('Browse All'),
-                        'uri' => url('exhibits')
-                    )
-                )); ?>
-            </nav>-->
-
             <?php echo pagination_links(); ?>
 
           <?php $exhibitCount = 0; ?>
