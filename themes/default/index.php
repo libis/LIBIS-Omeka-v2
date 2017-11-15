@@ -142,7 +142,7 @@
           <div class="col-content">
             <?php echo item_image('square_thumbnail', array(), 0, $lz);?>
           </div>
-          <a class="block-link" href="<?php echo url("libiszine");?>">
+          <a class="block-link" href="http://libis.be/libis/libiszine">
           <div class="col-overlay">
               <p><?php echo metadata($lz, array("Dublin Core", "Description"));?></p>
           </div>
