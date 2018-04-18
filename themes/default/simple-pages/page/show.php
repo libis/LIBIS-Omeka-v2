@@ -80,7 +80,8 @@ echo head(array(
             <div class="row">
               <div class="co col-md-12">
                 <h2>Zoeken in Limo</h2>
-                <iframe scrolling="no" src="https://services.libis.be/query/search_widget/index.html#institution=KUL&amp;view=KULeuven&amp;tab=1&amp;host=limo.libis.be" marginwidth="0" marginheight="0" id="limo_search_widget" width="100%" height="90" frameborder="0"></iframe>
+                <iframe id="limo_search_widget" marginheight="0" marginwidth="0" scrolling="no" src="https://services.libis.be/query/limo_widget/widget.html#host=limo.libis.be&amp;tab=all_content_tab&amp;search_scope
+    =ALL_CONTENT&amp;vid=KULeuven_UX&amp;lang=en_US&amp;offset=0" width="100%" height="50" frameborder="0"></iframe>
               </div>
             </div>
             <?php endif;?>
