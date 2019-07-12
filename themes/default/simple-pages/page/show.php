@@ -103,13 +103,7 @@ echo head(array(
           				<input name="Volltext" class="search-field-box" onclick="this.value='';" value="Zoeken in archieven" alt="Zoeken in archieven" title="Zoeken in archieven" type="text">
           				<input class="button" value="Zoek" type="submit">
           			</form>
-          			<form method="GET" action="http://aleph08.libis.kuleuven.be:8881/R/">
-          				<input name="request1" class="search-field-box" onclick="this.value='';" value="Zoeken in e-depot" alt="Zoeken in e-depot" title="Zoeken in e-depot" type="text">
-          				<input name="func" value="search-advanced-go" type="hidden">
-          				<input name="find_code1" value="WAZ" type="hidden">
-          				<input class="button" value="Zoek" type="submit">
-          			</form>
-                <div class="lias-meer">
+          		  <div class="lias-meer">
           			     <a href="http://abs.lias.be/Query/feldsuche.aspx">Uitgebreid zoeken</a> | <a href="/zoeken-in-lias">Handleiding</a>
           			     <br><a href="http://abs.lias.be/Query/archivplansuche.aspx">Blader door archieven</a>
                 </div>
