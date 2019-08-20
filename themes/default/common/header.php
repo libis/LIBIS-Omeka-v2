@@ -35,10 +35,11 @@
       echo head_css();
       echo theme_header_background();
     ?>
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700|Quicksand" rel="stylesheet">
-    <!-- JavaScripts -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700|Quicksand" rel="stylesheet">
+    <!-- JavaScripts -->
+    <?php echo head_js();?>
 
 </head>
 <?php echo body_tag(array('id' => @$bodyid, 'class' => @$bodyclass)); ?>
