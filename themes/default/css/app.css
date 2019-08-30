@@ -8462,6 +8462,16 @@ section.news{
   text-transform: lowercase;
 }
 
+.metadata-section .profile {
+  border-left: 1px solid #eee;
+}
+
+@media (max-width: 767px) {
+  .metadata-section .profile {
+    border: none;
+  }
+}
+
 .metadata-section .element {
   margin-bottom: 20px;
   clear: both;
@@ -8527,10 +8537,6 @@ section.news{
 .metadata-section .item-pagination {
   clear: both;
   padding: 1rem 2rem;
-}
-
-.metadata-section .item-pagination .next {
-  float: right;
 }
 
 .metadata-section .item-pagination li {

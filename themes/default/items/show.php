@@ -24,13 +24,13 @@
 
             <div class="row content">
                   <?php if (metadata('item', 'has files')): ?>
-                    <div class="col-sm-3 col-xs-12 page">
+                    <div class="col-sm-2 col-xs-12 page">
                       <div id="itemfiles" class="element">
                         <?php echo item_image_gallery(array(),'thumbnail'); ?>
                       </div>
                     </div>
                   <?php endif; ?>
-                  <div class="col-sm-9 col-xs-12 page" style="border-left:1px solid #eee;">
+                  <div class="col-sm-10 col-xs-12 page profile">
                         <?php if ($type != ''): ?>
                           <!--<h3 class="type-title"><?php echo $type;?></h3>-->
                         <?php endif; ?>
