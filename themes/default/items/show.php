@@ -84,7 +84,7 @@
                               <?php if (isset($texts['Profile Item Type Metadata']['Email'])): ?>
                               <div class="element">
                                   <h3><i class="fa fa-envelope-o" aria-hidden="true"></i></h3>
-                                  <div class="element-text"><?php echo implode(', ',$texts['Profile Item Type Metadata']['Email']); ?></div>
+                                  <div class="element-text"><?php echo encode_email_address( implode(', ',$texts['Profile Item Type Metadata']['Email'])); ?></div>
                               </div>
                               <?php endif; ?>
                               <?php if (isset($texts['Profile Item Type Metadata']['LinkedIn'])): ?>
@@ -110,6 +110,12 @@
                                     <h3><i class="fa fa-slideshare" aria-hidden="true"></i></h3>
                                     <div class="element-text"><?php echo $texts['Profile Item Type Metadata']['SlideShare'][0]; ?></div>
                                 </div>
+                              <?php endif; ?>
+                              <?php if (isset($texts['Profile Item Type Metadata']['Documentation'])): ?>
+                              <div class="element">
+                                  <h3><i class="fa fa-book" aria-hidden="true"></i></h3>
+                                  <div class="element-text"><?php echo implode(', ',$texts['Profile Item Type Metadata']['Documentation']); ?></div>
+                              </div>
                               <?php endif; ?>
                             </div>
 

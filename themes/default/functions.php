@@ -124,3 +124,15 @@ function get_color()
 
     return $colors['0'];
 }
+
+/**
+ * Encode an email address to display on your website
+ */
+function encode_email_address( $email ) {
+     $output = '';
+     for ($i = 0; $i < strlen($email); $i++)
+     {
+          $output .= '&#'.ord($email[$i]).';';
+     }
+     return $output;
+}
