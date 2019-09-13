@@ -51,13 +51,6 @@
                             </div>
                             <?php endif; ?>
 
-                            <?php if (isset($texts['Profile Item Type Metadata']['Documentation'])): ?>
-                            <div class="element">
-                                <h3><?php echo 'Documentation'; ?></h3>
-                                <div class="element-text"><?php echo implode(', ',$texts['Profile Item Type Metadata']['Documentation']); ?></div>
-                            </div>
-                            <?php endif; ?>
-
                             <?php if (isset($texts['Profile Item Type Metadata']['Bibliography'])): ?>
                             <div class="element">
                                 <h3><?php echo 'Bibliography'; ?></h3>
