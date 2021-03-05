@@ -8106,6 +8106,11 @@ header .blauw {
   width: 100%;
 }
 
+.spotlight-title {
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+}
+
 .co {
   margin-bottom: 3rem;
 }
@@ -8159,6 +8164,8 @@ header .blauw {
 
 .co .block-link {
   color: #333;
+  position: relative;
+  display: block;
 }
 
 .co .col-content {
@@ -8240,6 +8247,42 @@ header .blauw {
     background: none;
     margin-bottom: 0rem;
   }
+}
+
+.slick-list {
+  margin: 0 -20px !important;
+}
+
+.slick-slide {
+  margin: 0 20px !important;
+}
+
+.slick-prev::before, .slick-next::before {
+  font-family: 'slick';
+  font-family: 'Material Icons' !important;
+  color: #666 !important;
+  font-size: 4rem !important;
+  line-height: 0 !important;
+}
+
+.slick-prev {
+  left: -4rem !important;
+  width: 4rem !important;
+  height: 4rem !important;
+}
+
+.slick-next {
+  right: -4rem !important;
+  width: 4rem !important;
+  height: 4rem !important;
+}
+
+.slick-prev::before {
+  content: '\e408' !important;
+}
+
+.slick-next::before {
+  content: '\e409' !important;
 }
 
 .diensten {

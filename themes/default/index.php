@@ -21,11 +21,13 @@
 </section>
 <section class="home">
     <div id="content" class='container' role="main" tabindex="-1">
-      <div class="row">
+      <h2 class="spotlight-title">Uitgelicht</h2>
+
+      <div class="usecases">
         <?php $usecases = get_usecases();?>
         <?php if($usecases):?>
           <?php foreach($usecases as $usecase):?>
-            <div class="co col-md-6 col-lg-4">
+            <div class="co">
               <h2><?php echo metadata($usecase, array("Dublin Core", "Title"));?></h2>
               <div class="col-content">
                 <?php echo item_image('square_thumbnail', array(), 0, $usecase);?>
@@ -105,7 +107,7 @@
                     <a href="http://www.libisplus.be/">
                     <div class="deelsite blauw">
                         <div class="deelsite_image"> <img src="<?php echo img("LIBISplus_LOGO.png");?>" alt="LIBIS&#43;" /></div>
-                      
+
                     </div>
                     </a>
                 </div>

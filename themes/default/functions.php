@@ -66,7 +66,7 @@ function get_dienst_metadata($tag,$metadata){
 }
 
 function get_usecases(){
-  $usecases = get_records("Item",array("featured" => true,"type" => "use case"),3);
+  $usecases = get_records("Item",array("featured" => true,"type" => "use case"),12);
 
   if(!$usecases):
     return false;
