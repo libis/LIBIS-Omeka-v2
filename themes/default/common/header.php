@@ -29,10 +29,10 @@
     <?php fire_plugin_hook('public_head', array('view' => $this)); ?>
 
     <!-- Stylesheets -->
+    <link href="//libis.be/libis/application/views/scripts/css/iconfonts.css" media="all" rel="stylesheet" type="text/css">
+    <link href="//libis.be/libis/themes/default/css/app.css" media="all" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Frank+Ruhl+Libre:400,700,900|Open+Sans:300,400,700" media="all" rel="stylesheet" type="text/css">
     <?php
-      queue_css_file(array('iconfonts', 'app'));
-      queue_css_url('https://fonts.googleapis.com/css?family=Frank+Ruhl+Libre:400,700,900|Open+Sans:300,400,700');
-      echo head_css();
       echo theme_header_background();
     ?>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -43,7 +43,7 @@
 
     <!-- JavaScripts -->
     <?php echo head_js();?>
-  
+
 
 </head>
 <?php echo body_tag(array('id' => @$bodyid, 'class' => @$bodyclass)); ?>

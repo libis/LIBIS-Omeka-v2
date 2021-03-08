@@ -81,7 +81,9 @@
                     <a href="http://www.libisnet.be/">
                     <div class="deelsite groen">
                         <div class="deelsite_image"><img src="<?php echo img("LIBISnet_LOGO.png");?>"  alt="LIBISnet" /></div>
-
+                        <p>
+                          Voor bibliotheek
+                        </p>
                     </div>
                     </a>
                 </div>
@@ -89,7 +91,9 @@
                     <a href="http://www.heron-net.be/">
                     <div class="deelsite paars">
                         <div class="deelsite_image"><img src="<?php echo img("heron_logo.png");?>" alt="Heron" /></div>
-
+                        <p>
+                          Voor erfgoed
+                        </p>
                     </div>
                     </a>
                 </div>
@@ -99,7 +103,9 @@
                     <a href="http://www.lias.be/">
                     <div class="deelsite oranje">
                         <div class="deelsite_image"><img src="<?php echo img("lias_logo.png");?>" alt="Lias" /></div>
-
+                        <p>
+                          Voor archief
+                        </p>
                     </div>
                     </a>
                 </div>
@@ -107,7 +113,9 @@
                     <a href="http://www.libisplus.be/">
                     <div class="deelsite blauw">
                         <div class="deelsite_image"> <img src="<?php echo img("LIBISplus_LOGO.png");?>" alt="LIBIS&#43;" /></div>
-
+                        <p>
+                          Voor innovatie
+                        </p>
                     </div>
                     </a>
                 </div>

@@ -40,7 +40,9 @@
     <script src="//www.eucookie.eu/public/gdpr-cookie-consent.js" type="text/javascript"></script>
     <script type="text/javascript">
         var cookieConsent = new cookieConsent({
-            clientId: '28fa0980-2e6e-4d0d-865c-7f637bd4fc93'
+            clientId: '28fa0980-2e6e-4d0d-865c-7f637bd4fc93',
+            language: 'nl',
+            buttonBackground: '#a8abb0',
         });
         cookieConsent.run();
     </script>
