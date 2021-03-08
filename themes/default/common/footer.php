@@ -17,6 +17,8 @@
                             <li><a href="<?php echo url("ons-team");?>">Ons team</a></li>
                             <li><a href="<?php echo url("contact");?>">Contact</a></li>
                             <li><a href="https://extranet.libis.be/">Extranet</a></li>
+                            <li><a href="<?php echo url("cookies");?>">Cookies</a> (<a href="javascript:cookieConsent.changeConsent();">intellingen</a>) </li>
+
                         </ul>
                     </div>
                 </div>
@@ -35,6 +37,22 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.js"></script>
+    <script src="//www.eucookie.eu/public/gdpr-cookie-consent.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        var cookieConsent = new cookieConsent({
+            clientId: '28fa0980-2e6e-4d0d-865c-7f637bd4fc93'
+        });
+        cookieConsent.run();
+    </script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script type="text/plain" data-cookie-if="analytical" async src="https://www.googletagmanager.com/gtag/js?id=UA-24002921-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-24002921-1');
+    </script>
 
     <script>
 
