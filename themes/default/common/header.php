@@ -31,6 +31,7 @@
     <!-- Stylesheets -->
     <link href="//libis.be/libis/application/views/scripts/css/iconfonts.css" media="all" rel="stylesheet" type="text/css">
     <link href="//libis.be/libis/themes/default/css/app.css" media="all" rel="stylesheet" type="text/css">
+    <link href="//localhost/libis_nieuw/themes/default/css/app.css" media="all" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Frank+Ruhl+Libre:400,700,900|Open+Sans:300,400,700" media="all" rel="stylesheet" type="text/css">
     <?php
       echo theme_header_background();

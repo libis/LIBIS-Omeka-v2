@@ -7,18 +7,25 @@
                 <?php endif; ?>
                 <div class="row">
                     <div class="col-xs-12 col-xl-12">
-                        <img src="<?php echo img("libis_gray.png");?>">
+
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-xs-12 col-xl-12">
+                    <div class="col-xs-12 col-lg-10">
+                        <img src="<?php echo img("libis_gray.png");?>">
                         <ul>
                             <li><a href="<?php echo url("/");?>">Home</a></li>
                             <li><a href="<?php echo url("ons-team");?>">Ons team</a></li>
                             <li><a href="<?php echo url("contact");?>">Contact</a></li>
                             <li><a href="https://extranet.libis.be/">Extranet</a></li>
-                            <li><a href="<?php echo url("cookies");?>">Cookies</a> (<a href="javascript:cookieConsent.changeConsent();">intellingen</a>) </li>
+                            <li class="cookie-links"><a href="<?php echo url("cookies");?>">Cookies</a> (<a href="javascript:cookieConsent.changeConsent();">intellingen</a>) </li>
 
+                        </ul>
+                    </div>
+                    <div class="col-xs-12 col-lg-2">
+                        <ul class="quicklinks">
+                            <li><a target="_blank" href="https://intoinfo.blogspot.com">Blog</a></li>
+                            <li><a target="_blank" href="https://www.slideshare.net/Slideliblibis ">Slideshare</a></li>
                         </ul>
                     </div>
                 </div>
