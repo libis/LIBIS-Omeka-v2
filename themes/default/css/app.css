@@ -9008,22 +9008,21 @@ footer .quicklinks {
 }
 
 footer .quicklinks li {
-  list-style: none;
-  font-size: 0.9rem;
   font-size: 1rem;
   display: block;
   margin-bottom: 0.5rem;
 }
 
 footer .quicklinks a {
-  color: rgba(51, 51, 51, 0.5);
   padding: 0.2rem 0;
   border-bottom: 2px solid white;
 }
 
-footer .quicklinks a:hover {
-  color: rgba(51, 51, 51, 0.4);
-  text-decoration: none;
+@media (max-width: 991px) {
+  footer .quicklinks {
+    text-align: left;
+    margin-bottom: 1.5rem;
+  }
 }
 
 footer .copyright {

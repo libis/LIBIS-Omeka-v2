@@ -31,7 +31,6 @@
     <!-- Stylesheets -->
     <link href="//libis.be/libis/application/views/scripts/css/iconfonts.css" media="all" rel="stylesheet" type="text/css">
     <link href="//libis.be/libis/themes/default/css/app.css" media="all" rel="stylesheet" type="text/css">
-    <link href="//localhost/libis_nieuw/themes/default/css/app.css" media="all" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Frank+Ruhl+Libre:400,700,900|Open+Sans:300,400,700" media="all" rel="stylesheet" type="text/css">
     <?php
       echo theme_header_background();
@@ -54,7 +53,7 @@
           <button class="navbar-toggler navbar-toggler-right justify-content-end" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <i class='material-icons'>&#xE5D2;</i>
           </button>
-          <a class="navbar-brand" href="<?php echo WEB_ROOT;?>"><img src="<?php echo img('libis_gray.png');?>"></a>
+          <a class="navbar-brand" href="https://libis.be"><img src="<?php echo img('libis_gray.png');?>"></a>
 
           <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
             <?php echo public_nav_main_bootstrap();?>

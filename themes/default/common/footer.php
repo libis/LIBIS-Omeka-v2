@@ -11,7 +11,7 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-xs-12 col-lg-10">
+                    <div class="col-xs-12 col-md-10">
                         <img src="<?php echo img("libis_gray.png");?>">
                         <ul>
                             <li><a href="<?php echo url("/");?>">Home</a></li>
@@ -22,10 +22,10 @@
 
                         </ul>
                     </div>
-                    <div class="col-xs-12 col-lg-2">
+                    <div class="col-xs-12 col-md-2">
                         <ul class="quicklinks">
                             <li><a target="_blank" href="https://intoinfo.blogspot.com">Blog</a></li>
-                            <li><a target="_blank" href="https://www.slideshare.net/Slideliblibis ">Slideshare</a></li>
+                            <li><a target="_blank" href="https://www.slideshare.net/Slidelib">Slideshare</a></li>
                         </ul>
                     </div>
                 </div>
@@ -98,14 +98,14 @@
         slidesToScroll: 3,
         infinite: false,
         arrows: true,
+
         responsive: [
           {
             breakpoint: 1024,
             settings: {
               slidesToShow: 2,
               slidesToScroll: 2,
-              infinite: true,
-              dots: true
+              infinite: true
             }
           },
           {
