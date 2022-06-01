@@ -1,4 +1,7 @@
-<?php 
+<?php
+if ($versionNotifications):
+    queue_js_file('vendor/semver.min', 'javascripts');
+endif;
 $pageTitle = __('Plugins') . ' ' . __('(%s total)', $plugin_count);
 echo head(array('title' => $pageTitle, 'bodyclass' => 'plugins browse'));
 echo flash();
@@ -52,7 +55,7 @@ echo flash();
                 echo __('Version %s', html_escape($plugin->getIniVersion()));
             endif;
             ?>
-            <?php 
+            <?php
             if ($plugin->getAuthor()):
                 echo __('by %s', html_escape($plugin->getAuthor()));
             endif;
@@ -65,15 +68,31 @@ echo flash();
                 <p class="plugin-support-link"><a href="<?php echo $pluginSupportLink; ?>"><?php echo __("Get support"); ?></a></p>
             <?php endif;?>
             <?php if ($needsUpgrade): ?>
-                <ul class="details">
-                    <li class="success"><?php echo __('You have a new version of %s. Please upgrade!', $displayName); ?></li>
+                <ul class="version-notification active">
+                    <li class="flash success"><?php echo __('You have a new version of %s. Please upgrade!', $displayName); ?></li>
                 </ul>
             <?php endif; ?>
             <?php if ($cannotLoad): ?>
-                <ul class="details">
+                <ul class="version-notification active">
                 <?php foreach ($loadErrors as $error): ?>
-                    <li class="error"><?php echo html_escape($error); ?></li>
+                    <li class="flash error"><?php echo html_escape($error); ?></li>
                 <?php endforeach; ?>
+                </ul>
+            <?php endif; ?>
+            <?php if ($versionNotifications && $plugin->isActive()): ?>
+                <ul class="version-notification"
+                    data-addon-id="<?php echo html_escape($pluginDirName); ?>"
+                    data-current-version="<?php echo html_escape($plugin->getIniVersion()); ?>">
+                    <li class="flash success">
+                    <?php echo sprintf(
+                        $this->translate('A new version of this plugin is available. %s'),
+                        sprintf(
+                            '<a href="%s">%s</a>',
+                            'https://omeka.org/classic/plugins/' . $pluginDirName,
+                            $this->translate('Get the new version.')
+                        )
+                    ); ?>
+                    </li>
                 </ul>
             <?php endif; ?>
 
@@ -87,7 +106,7 @@ echo flash();
                                 <li></li>
                                 <li></li>
                                 <li>
-                                    <button name="upgrade" type="submit" class="upgrade big green button"<?php if ($cannotLoad): ?> disabled="disabled"<?php endif; ?>><?php echo __('Upgrade'); ?></button>
+                                    <button name="upgrade" type="submit" class="upgrade green button"<?php if ($cannotLoad): ?> disabled="disabled"<?php endif; ?>><?php echo __('Upgrade'); ?></button>
                                     <input type="hidden" name="name" value="<?php echo html_escape($pluginDirName); ?>" />
                                 </li>
                                 <?php echo $csrf; ?>
@@ -98,13 +117,13 @@ echo flash();
                     <?php if (is_allowed($plugin, 'activate')  && !$cannotLoad): ?>
                         <li>
                         <?php if (is_allowed($plugin, 'config') && $plugin->hasConfig()): ?>
-                        <a href="<?php echo html_escape(url('plugins/config', array('name' => $plugin->getDirectoryName()))); ?>" class="big blue button"><?php echo __('Configure'); ?></a>
+                        <a href="<?php echo html_escape(url('plugins/config', array('name' => $plugin->getDirectoryName()))); ?>" class="blue button"><?php echo __('Configure'); ?></a>
                         <?php endif; ?>
                         </li>
                         <li>
                         <?php if (!$cannotLoad): ?>
                             <form action="<?php echo html_escape(url('plugins/' . $activateOrDeactivate)); ?>" method="post" accept-charset="utf-8">
-                            <button name="<?php echo $activateOrDeactivate; ?>" type="submit" class="big <?php echo ($plugin->isActive()) ? 'red' : 'green'; ?> button"><?php echo ($plugin->isActive()) ? __('Deactivate') : __('Activate'); ?></button>
+                            <button name="<?php echo $activateOrDeactivate; ?>" type="submit" class="<?php echo ($plugin->isActive()) ? 'red' : 'green'; ?> button"><?php echo ($plugin->isActive()) ? __('Deactivate') : __('Activate'); ?></button>
                             <input type="hidden" name="name" value="<?php echo html_escape($plugin->name); ?>" />
                             <?php echo $csrf; ?>
                             </form>
@@ -115,7 +134,7 @@ echo flash();
                     <?php if (is_allowed($plugin, 'uninstall') && !$cannotLoad): ?>
                             <form action="<?php echo html_escape(url(array('controller' => 'plugins', 'action' => 'uninstall'), 'default')); ?>" method="post" accept-charset="utf-8">
 
-                            <button name="uninstall" type="submit" class="uninstall big red button"><?php echo __('Uninstall'); ?></button>
+                            <button name="uninstall" type="submit" class="uninstall red button"><?php echo __('Uninstall'); ?></button>
                             <input type="hidden" name="name" value="<?php echo html_escape($plugin->name); ?>" />
                             </form>
                     <?php endif; ?> 
@@ -128,7 +147,7 @@ echo flash();
                         <li></li>
                         <li>
                             <form action="<?php echo html_escape(url('plugins/install')); ?>" method="post" accept-charset="utf-8">
-                            <button name="install" type="submit" class="install big green button"<?php if ($cannotLoad): ?> disabled="disabled"<?php endif; ?>><?php echo __('Install'); ?></button>
+                            <button name="install" type="submit" class="install green button"<?php if ($cannotLoad): ?> disabled="disabled"<?php endif; ?>><?php echo __('Install'); ?></button>
                             <input type="hidden" name="name" value="<?php echo html_escape($plugin->name); ?>" />
                             <?php echo $csrf; ?>
                             </form> 
@@ -143,4 +162,9 @@ echo flash();
     <p><?php echo __('You do not have any plugins installed. Add them to the plugins directory to see them listed here.'); ?></p>
 <?php endif; ?>
 <?php fire_plugin_hook('admin_plugins_browse', array('plugins' => $plugins, 'view' => $this)); ?>
+<?php if($versionNotifications): ?>
+<script>
+    Omeka.runVersionNotification('https://omeka.org/add-ons/json/classic_plugin.json');
+</script>
+<?php endif; ?>
 <?php echo foot(); ?>

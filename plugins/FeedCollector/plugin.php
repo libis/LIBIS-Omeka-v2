@@ -97,12 +97,8 @@ function feedCollector_convertToHtml($feed,$proxy,$limit) {
 	curl_setopt($ch, CURLOPT_USERAGENT, $user_agent);
 
 	curl_setopt($ch, CURLOPT_HEADER, 0);
-
-	if(!empty($proxy))
-		curl_setopt($ch, CURLOPT_PROXY,$proxy);
-
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-        curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 0);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+    curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 0);
 
 	//get data and close connection
 	$data = curl_exec($ch);

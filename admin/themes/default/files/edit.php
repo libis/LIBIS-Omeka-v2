@@ -7,7 +7,7 @@ if ($fileTitle != '') {
 }
 $fileTitle = __('Edit File #%s', metadata('file', 'id')) . $fileTitle;
 
-queue_js_file(array('vendor/tiny_mce/tiny_mce', 'elements', 'tabs'));
+queue_js_file(array('vendor/tinymce/tinymce.min', 'elements', 'tabs'));
 echo head(array('title' => $fileTitle, 'bodyclass' => 'files edit'));
 include 'form-tabs.php';
 echo flash();
@@ -36,15 +36,17 @@ echo flash();
             <?php if (is_allowed('Files', 'delete')): ?>
                 <?php echo link_to($file, 'delete-confirm', __('Delete'), array('class' => 'big red button delete-confirm')); ?>
             <?php endif; ?>
+            <?php fire_plugin_hook("admin_files_panel_buttons", array('view'=>$this, 'record'=>$file)); ?>
+            <?php fire_plugin_hook("admin_files_panel_fields", array('view'=>$this, 'record'=>$file)); ?>
         </div>
     </section>
 </form>
 <script type="text/javascript" charset="utf-8">
-jQuery(window).load(function () {
+jQuery(document).ready(function () {
     Omeka.Tabs.initialize();
     Omeka.wysiwyg({
-        mode: "none",
-        forced_root_block: ""
+        selector: false,
+        forced_root_block: false
     });
 
     // Must run the element form scripts AFTER reseting textarea ids.

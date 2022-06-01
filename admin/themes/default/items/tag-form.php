@@ -8,7 +8,7 @@
         <label><?php echo __('Add Tags'); ?></label>           
         <input type="text" name="tags" size="20" id="tags" class="textinput" value="" />
         <p id="add-tags-explanation" class="explanation"><?php echo __('Separate tags with %s', option('tag_delimiter')); ?></p>
-        <input type="submit" name="add-tags-button" id="add-tags-button" class="green button" value="<?php echo __('Add Tags'); ?>" />
+        <input type="submit" name="add-tags-button" id="add-tags-button" class="button" value="<?php echo __('Add Tags'); ?>" />
     </div>
     <div id="all-tags">
     <?php if ($tags): ?>
@@ -18,7 +18,7 @@
         <ul id="all-tags-list">
             <?php foreach( $tags as $tag ): ?>
                 <li>
-                    <?php echo '<span class="tag">' . $tag->name . '</span>'; 
+                    <?php echo '<span class="tag">' . html_escape($tag->name) . '</span>';
                           echo '<span class="undo-remove-tag"><a href="#">' . __('Undo') . '</a></span>';
                           echo '<span class="remove-tag"><a href="#">' . __('Remove') . '</a></span>'; ?>
                 </li>

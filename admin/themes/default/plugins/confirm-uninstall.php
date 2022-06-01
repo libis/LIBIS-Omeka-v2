@@ -7,9 +7,11 @@ echo flash();
     <p><strong><?php echo __('Are you sure you want to uninstall %s?', $plugin->getDisplayName()); ?></strong></p>
     <?php if ($message): ?>
     <?php echo __($message); ?>
+    <?php else:?>
+    <p><?php echo __('Warning: data associated with this plugin may be permanently deleted from the database.'); ?>
     <?php endif; ?>
     <form action="<?php echo html_escape(url('plugins/uninstall')); ?>" method="post">
-        <p><input type="checkbox" name="confirm" /> <?php echo __('Yes, I want to uninstall this plugin.'); ?></p>
+        <label><input type="checkbox" name="confirm" /> <?php echo __('Yes, I want to uninstall this plugin.'); ?></label>
         <input type="hidden" name="name" value="<?php echo html_escape($plugin->getDirectoryName()); ?>" />
 
         <p id="uninstall-confirm">

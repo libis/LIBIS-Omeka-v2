@@ -14,25 +14,19 @@ if (!Omeka) {
         // Default parameters
         initParams = {
             convert_urls: false,
-            mode: "textareas", // All textareas
-            theme: "advanced",
-            theme_advanced_toolbar_location: "top",
-            theme_advanced_statusbar_location: "none",
-            theme_advanced_toolbar_align: "left",
-            theme_advanced_buttons1: "bold,italic,underline,|,justifyleft,justifycenter,justifyright,|,bullist,numlist,|,link,formatselect,code",
-            theme_advanced_buttons2: "",
-            theme_advanced_buttons3: "",
-            theme_advanced_blockformats: "p,address,pre,h1,h2,h3,h4,h5,h6,blockquote,address,div",
-            plugins: "paste,inlinepopups,media,autoresize",
-            media_strict: false,
-            width: "100%",
+            selector: "textarea",
+            menubar: false,
+            statusbar: false,
+            toolbar_items_size: "small",
+            toolbar: "bold italic underline | alignleft aligncenter alignright | bullist numlist | link formatselect code",
+            plugins: "lists,link,code,paste,media,autoresize",
             autoresize_max_height: 500,
             entities: "160,nbsp,173,shy,8194,ensp,8195,emsp,8201,thinsp,8204,zwnj,8205,zwj,8206,lrm,8207,rlm",
             verify_html: false,
-            add_unload_trigger: false
+            add_unload_trigger: false,
         };
 
-        tinyMCE.init($.extend(initParams, params));
+        tinymce.init($.extend(initParams, params));
     };
 
     Omeka.deleteConfirm = function () {
@@ -62,7 +56,7 @@ if (!Omeka) {
             $contentDiv = $("#content");
         if (document.getElementById("save")) {
             $window.scroll(function () {
-                if($window.scrollTop() > offset.top && $window.width() > 767 && ($window.height() - topPadding - 85) >  $save.height()) {
+                if($window.scrollTop() > offset.top && $window.width() > 991 && ($window.height() - topPadding - 85) >  $save.height()) {
                     $save.stop().animate({
                         marginTop: $window.scrollTop() - offset.top + topPadding
                         });
@@ -74,22 +68,19 @@ if (!Omeka) {
             });
         }
     };
-
-    Omeka.stickyNav = function() {
-        var $nav    = $("#content-nav"),
-            $window = $(window);
-        if ($window.height() - 50 < $nav.height()) {
-            $nav.addClass("unfix");
-        }
-        $window.resize( function() {
-            if ($window.height() - 50 < $nav.height()) {
-                $nav.addClass("unfix");
-            } else {
-                $nav.removeClass("unfix");
-            }
-        });
+    
+    Omeka.toggleMobileMenu = function() {
+	    $('.mobile-menu').click(function (event) {
+			var target = $(this).data('target');
+			$(target).toggleClass('in');
+            $(this).parent('nav').toggleClass('open');
+	    });
     };
-
+    
+    Omeka.moveNavList = function () {
+        nav = $('.content-wrapper > .navigation');
+        nav.insertAfter(nav.parent().parent().find('.subhead'));
+    };
 
     Omeka.showAdvancedForm = function () {
         var advancedForm = $('#advanced-form');
@@ -162,7 +153,7 @@ if (!Omeka) {
             form.submit(setSubmittedFlag);
         });
 
-        $('body').on('submit', 'form.delete-confirm', function () {
+        $('body').on('submit', 'form.delete-confirm-form', function () {
             deleteConfirmed = true;
         });
 
@@ -207,10 +198,57 @@ if (!Omeka) {
     Omeka.readyCallbacks = [
         [Omeka.deleteConfirm, null],
         [Omeka.saveScroll, null],
-        [Omeka.stickyNav, null],
+        [Omeka.toggleMobileMenu, null],
         [Omeka.showAdvancedForm, null],
         [Omeka.skipNav, null],
+        [Omeka.moveNavList, null],
         [Omeka.mediaFallback, null],
         [Omeka.warnIfUnsaved, null]
     ];
+
+    /**
+     * Run version notification for addons (active plugins & current theme).
+     *
+     * Normalizes addon versions by adding a PATCH version if none given. Addons
+     * often don't include the PATCH version that's required by the semver spec.
+     * Semver's JS doesn't include a way to coerce a version and the "loose"
+     * option doesn't apply here.
+     *
+     * @see https://semver.org/
+     * @param string endpoint
+     */
+    Omeka.runVersionNotification = function (endpoint) {
+        $.get(endpoint).done(function(data) {
+            var normalizeVersion = function(version) {
+                version = String(version);
+                if (1 === (version.split('.').length - 1)) {
+                    version = version + '.0';
+                }
+                return version;
+            };
+            $('.version-notification').each(function(index) {
+                var addon = $(this);
+                var addonId = addon.data('addon-id');
+                if (addonId in data) {
+                    if (semver.lt(
+                        normalizeVersion(addon.data('current-version')),
+                        normalizeVersion(data[addonId]['latest_version'])
+                    )) {
+                        addon.addClass('active');
+                    }
+                }
+            });
+        });
+    };
+
+    Omeka.quickFilter = function () {
+        var quickFilterSelect = $('select.quick-filter');
+        quickFilterSelect.change(function() {
+            var url = $(this).val();
+            if (url) {
+                window.location = url;
+            } 
+            return false;
+        });
+    }
 })(jQuery);

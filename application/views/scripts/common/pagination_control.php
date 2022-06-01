@@ -18,24 +18,27 @@ if ($this->pageCount > 1):
         $hiddenParams = array();
         $entries = explode('&', http_build_query($getParams));
         foreach ($entries as $entry) {
-            if(!$entry) {
+            if (!$entry) {
                 continue;
             }
             list($key, $value) = explode('=', $entry);
             $hiddenParams[urldecode($key)] = urldecode($value);
         }
 
-        foreach($hiddenParams as $key => $value) {
-            if($key != 'page') {
-                echo $this->formHidden($key,$value);
+        foreach ($hiddenParams as $key => $value) {
+            if ($key != 'page') {
+                echo $this->formHidden($key, $value);
             }
         }
 
         // Manually create this input to allow an omitted ID
-        $pageInput = '<input type="text" name="page" title="'
+        $pageInput = '<label>'
+                    . __('Page') 
+                    . '<input type="text" name="page" title="'
                     . html_escape(__('Current Page'))
                     . '" value="'
-                    . html_escape($this->current) . '">';
+                    . html_escape($this->current) . '">'
+                    . '</label>';
         echo __('%s of %s', $pageInput, $this->last);
         ?>
         </form>
